@@ -1,8 +1,8 @@
 # Claude Code Skills
 
-A curated collection of 24 skills for Claude Code, assembled from multiple open-source projects and original work. Plugin framework removed — works directly with `~/.claude/skills/`.
+An embedded-oriented skill collection for Claude Code, built on [obra/superpowers](https://github.com/obra/superpowers) as the foundation, enhanced with safety guardrails from [garrytan/gstack](https://github.com/garrytan/gstack), supplementary skills from [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) and others, plus an original MCU selection skill — forming an engineered workflow for embedded software development.
 
-从多个开源项目和个人原创整合的 24 个 Claude Code 技能集，移除了插件框架，直接放入 `~/.claude/skills/` 即可使用。
+以 [obra/superpowers](https://github.com/obra/superpowers) 为蓝本的嵌入式开发技能集。因作者为嵌入式软件工程师，吸收了 [garrytan/gstack](https://github.com/garrytan/gstack) 的 freeze 和 careful 安全护栏，补充了 [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) 等项目的单功能加强 skills，以及自研的 mcu-selection，形成一套初步的嵌入式软件开发工程化约束 skill 流程。
 
 ## What's Included
 
@@ -39,14 +39,14 @@ These are starting points. The installer will not overwrite your existing settin
 | Skill | Description | Source |
 |-------|-------------|--------|
 | brainstorming | Collaborative design exploration | [obra/superpowers](https://github.com/obra/superpowers) |
-| careful | Safety guardrails for destructive commands | [obra/superpowers](https://github.com/obra/superpowers) |
+| careful | Safety guardrails for destructive commands | [garrytan/gstack](https://github.com/garrytan/gstack) |
 | dispatching-parallel-agents | Run independent tasks in parallel | [obra/superpowers](https://github.com/obra/superpowers) |
 | executing-plans | Execute implementation plans | [obra/superpowers](https://github.com/obra/superpowers) |
 | find-skills | Discover and install new skills | [vercel-labs/skills](https://github.com/vercel-labs/skills) |
 | finishing-a-development-branch | Merge/integrate completed work | [obra/superpowers](https://github.com/obra/superpowers) |
-| freeze | Restrict file edits to a directory | [obra/superpowers](https://github.com/obra/superpowers) |
-| karpathy-guidelines | Coding quality principles | [obra/superpowers](https://github.com/obra/superpowers) |
-| mcu-selection | MCU selection from 284+ database | **Original** |
+| freeze | Restrict file edits to a directory | [garrytan/gstack](https://github.com/garrytan/gstack) |
+| karpathy-guidelines | Coding quality principles | [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) |
+| mcu-selection | MCU selection from 284+ database | **Original / 原创** |
 | product-requirements | Generate PRD with quality scoring | [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude/tree/master/skills/product-requirements) |
 | receiving-code-review | Process code review feedback | [obra/superpowers](https://github.com/obra/superpowers) |
 | requesting-code-review | Get code review before merging | [obra/superpowers](https://github.com/obra/superpowers) |
@@ -67,8 +67,10 @@ These are starting points. The installer will not overwrite your existing settin
 
 | Source | Count | Skills |
 |--------|-------|--------|
-| [obra/superpowers](https://github.com/obra/superpowers) | 17 | brainstorming, careful, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, freeze, karpathy-guidelines, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills |
-| [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) | 3 | product-requirements, test-cases, skill-install, sparv |
+| [obra/superpowers](https://github.com/obra/superpowers) | 14 | brainstorming, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills |
+| [garrytan/gstack](https://github.com/garrytan/gstack) | 2 | careful, freeze |
+| [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | 1 | karpathy-guidelines |
+| [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) | 4 | product-requirements, test-cases, skill-install, sparv |
 | [anthropics/skills](https://github.com/anthropics/skills) | 1 | skill-creator |
 | [vercel-labs/skills](https://github.com/vercel-labs/skills) | 1 | find-skills |
 | **Original / 原创** | 1 | mcu-selection |

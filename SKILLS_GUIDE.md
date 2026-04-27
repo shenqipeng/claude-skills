@@ -1,14 +1,16 @@
 # Claude Code Skills Guide / Claude Code 技能集指南
 
-A curated collection of 24 skills for Claude Code, assembled from multiple open-source projects and original work. These skills form a structured workflow for software development — from requirements gathering to implementation, debugging, and delivery.
+An embedded-oriented skill collection for Claude Code, built on [obra/superpowers](https://github.com/obra/superpowers) as the foundation, enhanced with safety guardrails from [garrytan/gstack](https://github.com/garrytan/gstack), supplementary skills from [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) and others, plus an original MCU selection skill — forming an engineered workflow for embedded software development.
 
-本技能集包含 24 个 Claude Code 技能，从多个开源项目和个人原创整合而来，构成了从需求分析到实现、调试和交付的完整开发工作流。
+以 [obra/superpowers](https://github.com/obra/superpowers) 为蓝本的嵌入式开发技能集。因作者为嵌入式软件工程师，吸收了 [garrytan/gstack](https://github.com/garrytan/gstack) 的 freeze 和 careful 安全护栏，补充了 [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) 等项目的单功能加强 skills，以及自研的 mcu-selection，形成一套初步的嵌入式软件开发工程化约束 skill 流程。
 
 ## Sources / 来源
 
 | Source | Count / 数量 | Skills |
 |--------|------|--------|
-| [obra/superpowers](https://github.com/obra/superpowers) | 17 | brainstorming, careful, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, freeze, karpathy-guidelines, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills |
+| [obra/superpowers](https://github.com/obra/superpowers) | 14 | brainstorming, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills |
+| [garrytan/gstack](https://github.com/garrytan/gstack) | 2 | careful, freeze |
+| [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) | 1 | karpathy-guidelines |
 | [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) | 4 | product-requirements, test-cases, skill-install, sparv |
 | [anthropics/skills](https://github.com/anthropics/skills) | 1 | skill-creator |
 | [vercel-labs/skills](https://github.com/vercel-labs/skills) | 1 | find-skills |
@@ -58,11 +60,11 @@ A curated collection of 24 skills for Claude Code, assembled from multiple open-
 
 | Skill | Description | 说明 | Source |
 |-------|-------------|------|--------|
-| **karpathy-guidelines** | Coding quality: think before code, simplicity, surgical changes, verifiable criteria. | 编码质量：先思考后编码，简洁，精准修改，可验证的标准。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **karpathy-guidelines** | Coding quality: think before code, simplicity, surgical changes, verifiable criteria. | 编码质量：先思考后编码，简洁，精准修改，可验证的标准。 | [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) |
 | **requesting-code-review** | Gets code review before merging. Works with subagent-driven per-task review. | 合并前获取代码审查。配合子代理驱动的逐任务审查。 | [obra/superpowers](https://github.com/obra/superpowers) |
 | **receiving-code-review** | Processes code review feedback with technical rigor before implementing. | 在实施前以技术严谨性处理代码审查反馈。 | [obra/superpowers](https://github.com/obra/superpowers) |
-| **careful** | Safety guardrails for destructive commands. Signals: flash, erase, fuse, force-push. | 破坏性命令的安全护栏。信号词：烧录、擦除、熔丝、强制推送。 | [obra/superpowers](https://github.com/obra/superpowers) |
-| **freeze** | Restricts file edits to a specific directory. Especially valuable in embedded debugging. | 将文件编辑限制在特定目录。在嵌入式调试中特别有价值。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **careful** | Safety guardrails for destructive commands. Signals: flash, erase, fuse, force-push. | 破坏性命令的安全护栏。信号词：烧录、擦除、熔丝、强制推送。 | [garrytan/gstack](https://github.com/garrytan/gstack) |
+| **freeze** | Restricts file edits to a specific directory. Especially valuable in embedded debugging. | 将文件编辑限制在特定目录。在嵌入式调试中特别有价值。 | [garrytan/gstack](https://github.com/garrytan/gstack) |
 
 ### 7. Debugging / 调试
 
@@ -210,7 +212,7 @@ flowchart TD
     classDef original fill:#E74C3C,stroke:#A83325,color:#fff
     classDef plan fill:#2ECC71,stroke:#1A8B4C,color:#fff
     classDef exec fill:#E67E22,stroke:#A85C18,color:#fff
-    classDef test fill:#E74C3C,stroke:#A83325,color:#fff
+    classDef test fill:#9B59B3,stroke:#6C3483,color:#fff
     classDef qual fill:#F39C12,stroke:#A86C0C,color:#fff
     classDef debug fill:#9B59B6,stroke:#6C3483,color:#fff
     classDef deliver fill:#1ABC9C,stroke:#117A65,color:#fff
@@ -230,8 +232,8 @@ flowchart TD
     class SP workflow
 ```
 
-> **Color note / 颜色说明:** Red node = original work (mcu-selection). Other colors represent categories, see legend above.
-> 红色节点 = 原创（mcu-selection）。其余颜色代表类别，见上方图例。
+> **Node colors / 节点颜色：** Red = original work (mcu-selection). Orange = quality guardrails from gstack (freeze, careful). Other colors = categories, see legend above.
+> 红色 = 原创（mcu-selection）。橙色中 freeze 和 careful 来自 gstack 安全护栏。其余颜色代表类别，见上方图例。
 
 ---
 
@@ -283,9 +285,9 @@ These skills are invoked by other skills at specific points, not triggered direc
 
 | Skill | Invoked By | When / 何时调用 | Source |
 |-------|-----------|----------------|--------|
-| **freeze** | systematic-debugging, subagent-driven-development, executing-plans | Before editing — lock scope to fault module or task directory / 编辑前锁定范围到故障模块或任务目录 | [obra/superpowers](https://github.com/obra/superpowers) |
-| **careful** | systematic-debugging, subagent-driven-development, finishing-a-development-branch | Before destructive ops: flash, erase, fuse, force-push / 破坏性操作前：烧录、擦除、熔丝、强制推送 | [obra/superpowers](https://github.com/obra/superpowers) |
-| **karpathy-guidelines** | subagent-driven-development, executing-plans, systematic-debugging | During implementation — ensures quality principles / 实现过程中确保质量准则 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **freeze** | systematic-debugging, subagent-driven-development, executing-plans | Before editing — lock scope to fault module or task directory / 编辑前锁定范围到故障模块或任务目录 | [garrytan/gstack](https://github.com/garrytan/gstack) |
+| **careful** | systematic-debugging, subagent-driven-development, finishing-a-development-branch | Before destructive ops: flash, erase, fuse, force-push / 破坏性操作前：烧录、擦除、熔丝、强制推送 | [garrytan/gstack](https://github.com/garrytan/gstack) |
+| **karpathy-guidelines** | subagent-driven-development, executing-plans, systematic-debugging | During implementation — ensures quality principles / 实现过程中确保质量准则 | [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) |
 | **verification-before-completion** | TDD, systematic-debugging, subagent-driven-development, finishing-a-development-branch | Before claiming done/fixed/passing / 完成前必须验证 | [obra/superpowers](https://github.com/obra/superpowers) |
 | **requesting-code-review** | subagent-driven-development (per task), finishing-a-development-branch | After implementation, before merge / 实现后合并前 | [obra/superpowers](https://github.com/obra/superpowers) |
 | **test-driven-development** | systematic-debugging (Phase 4), subagent-driven-development | Writing fix or feature code / 编写修复或功能代码 | [obra/superpowers](https://github.com/obra/superpowers) |
@@ -294,7 +296,9 @@ These skills are invoked by other skills at specific points, not triggered direc
 
 ## Acknowledgments / 致谢
 
-- [obra/superpowers](https://github.com/obra/superpowers) — Core workflow skills (17 skills)
+- [obra/superpowers](https://github.com/obra/superpowers) — Core workflow foundation (14 skills)
+- [garrytan/gstack](https://github.com/garrytan/gstack) — Embedded safety guardrails: freeze, careful
+- [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) — karpathy-guidelines
 - [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) — product-requirements, test-cases, skill-install, sparv
 - [anthropics/skills](https://github.com/anthropics/skills) — skill-creator
 - [vercel-labs/skills](https://github.com/vercel-labs/skills) — find-skills
