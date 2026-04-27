@@ -1,0 +1,348 @@
+{
+  "manufacturer": "Fudan Microelectronics (复旦微)",
+  "url": "http://www.fmsh.com",
+  "collection_date": "2025-03-24",
+  "series": [
+    {
+      "series_name": "FM33LC0xx",
+      "description": "Low-power 32-bit ARM Cortex-M0 MCU with USB",
+      "core": "ARM Cortex-M0",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.8V~5.5V (1.8V~3.6V with USB)",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "USB 2.0 FS Device", "RTC with temperature compensation", "AES", "OPA", "SAR ADC"],
+      "models": [
+        {"part_number": "FM33LC012N", "flash_kb": 64, "ram_kb": 24, "package": "TSSOP20", "io_count": 16, "adc_channels": 6},
+        {"part_number": "FM33LC012M", "flash_kb": 64, "ram_kb": 24, "package": "TSSOP20", "io_count": 16, "adc_channels": 6},
+        {"part_number": "FM33LC013N", "flash_kb": 64, "ram_kb": 24, "package": "QFN32", "io_count": 27, "adc_channels": 9},
+        {"part_number": "FM33LC015N", "flash_kb": 64, "ram_kb": 24, "package": "LQFP48", "io_count": 44, "adc_channels": 11},
+        {"part_number": "FM33LC016N", "flash_kb": 64, "ram_kb": 24, "package": "LQFP64", "io_count": 56, "adc_channels": 12},
+        {"part_number": "FM33LC022N", "flash_kb": 128, "ram_kb": 24, "package": "TSSOP20", "io_count": 16, "adc_channels": 6},
+        {"part_number": "FM33LC023N", "flash_kb": 128, "ram_kb": 24, "package": "QFN32", "io_count": 27, "adc_channels": 9},
+        {"part_number": "FM33LC023U", "flash_kb": 128, "ram_kb": 24, "package": "QFN32", "io_count": 26, "adc_channels": 9, "features": ["USB"]},
+        {"part_number": "FM33LC025N", "flash_kb": 128, "ram_kb": 24, "package": "LQFP48", "io_count": 44, "adc_channels": 11},
+        {"part_number": "FM33LC026N", "flash_kb": 128, "ram_kb": 24, "package": "LQFP64", "io_count": 56, "adc_channels": 12},
+        {"part_number": "FM33LC026U", "flash_kb": 128, "ram_kb": 24, "package": "LQFP64", "io_count": 54, "adc_channels": 12, "features": ["USB"]},
+        {"part_number": "FM33LC042N", "flash_kb": 256, "ram_kb": 24, "package": "TSSOP20", "io_count": 16, "adc_channels": 6},
+        {"part_number": "FM33LC043N", "flash_kb": 256, "ram_kb": 24, "package": "QFN32", "io_count": 27, "adc_channels": 9},
+        {"part_number": "FM33LC044N", "flash_kb": 256, "ram_kb": 24, "package": "LQFP44", "io_count": 41, "adc_channels": 11},
+        {"part_number": "FM33LC044NR", "flash_kb": 256, "ram_kb": 24, "package": "LQFP44", "io_count": 41, "adc_channels": 11},
+        {"part_number": "FM33LC045N", "flash_kb": 256, "ram_kb": 24, "package": "LQFP48", "io_count": 44, "adc_channels": 11},
+        {"part_number": "FM33LC046N", "flash_kb": 256, "ram_kb": 24, "package": "LQFP64", "io_count": 56, "adc_channels": 12},
+        {"part_number": "FM33LC046U", "flash_kb": 256, "ram_kb": 24, "package": "LQFP64", "io_count": 54, "adc_channels": 12, "features": ["USB"]}
+      ]
+    },
+    {
+      "series_name": "FM33LG0xx",
+      "description": "Low-power 32-bit ARM Cortex-M0 MCU with CAN/LIN",
+      "core": "ARM Cortex-M0",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.65V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "OPA", "COMP", "DAC", "CAN", "SAR ADC"],
+      "models": [
+        {"part_number": "FM33LG023", "flash_kb": 128, "ram_kb": 32, "package": "QFN32", "io_count": 26, "adc_channels": 9, "features": ["UART", "LIN"]},
+        {"part_number": "FM33LG025", "flash_kb": 128, "ram_kb": 32, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "features": ["UART", "LIN"]},
+        {"part_number": "FM33LG026", "flash_kb": 128, "ram_kb": 32, "package": "LQFP64", "io_count": 56, "adc_channels": 18, "features": ["UART", "LIN", "CAN"]},
+        {"part_number": "FM33LG043", "flash_kb": 256, "ram_kb": 32, "package": "QFN32", "io_count": 26, "adc_channels": 5, "features": ["UART", "LIN"]},
+        {"part_number": "FM33LG045", "flash_kb": 256, "ram_kb": 32, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "features": ["UART", "LIN"]},
+        {"part_number": "FM33LG046", "flash_kb": 256, "ram_kb": 32, "package": "LQFP64", "io_count": 56, "adc_channels": 18, "features": ["UART", "LIN", "CAN"]},
+        {"part_number": "FM33LG048", "flash_kb": 256, "ram_kb": 32, "package": "LQFP80", "io_count": 68, "adc_channels": 18, "features": ["UART", "LIN", "CAN"]}
+      ]
+    },
+    {
+      "series_name": "FM33LG0xxA (Automotive)",
+      "description": "Automotive-grade low-power 32-bit ARM Cortex-M0 MCU, AEC-Q100 certified",
+      "core": "ARM Cortex-M0",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.65V~5.5V",
+      "temperature_range": "-40°C~+105°C",
+      "certification": "AEC-Q100",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "OPA", "COMP", "DAC", "CAN 2.0B", "LIN", "SAR ADC"],
+      "models": [
+        {"part_number": "FM33LG023A", "flash_kb": 128, "ram_kb": 32, "package": "QFN32", "io_count": 26, "adc_channels": 9, "features": ["UART", "LIN"]},
+        {"part_number": "FM33LG025A", "flash_kb": 128, "ram_kb": 32, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "features": ["UART", "LIN"]},
+        {"part_number": "FM33LG026A", "flash_kb": 128, "ram_kb": 32, "package": "LQFP64", "io_count": 56, "adc_channels": 18, "features": ["UART", "LIN", "CAN"]},
+        {"part_number": "FM33LG045A", "flash_kb": 256, "ram_kb": 32, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "features": ["UART", "LIN"]},
+        {"part_number": "FM33LG046A", "flash_kb": 256, "ram_kb": 32, "package": "LQFP64", "io_count": 56, "adc_channels": 18, "features": ["UART", "LIN", "CAN"]},
+        {"part_number": "FM33LG048A", "flash_kb": 256, "ram_kb": 32, "package": "LQFP80", "io_count": 68, "adc_channels": 18, "features": ["UART", "LIN", "CAN"]}
+      ]
+    },
+    {
+      "series_name": "FM33LE0xx",
+      "description": "Low-power 32-bit ARM Cortex-M0+ MCU",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "OPA", "SAR ADC", "Low Power"],
+      "models": [
+        {"part_number": "FM33LE012", "flash_kb": 64, "ram_kb": 16, "package": "LQFP32/QFN32", "io_count": 20, "adc_channels": 6},
+        {"part_number": "FM33LE013", "flash_kb": 64, "ram_kb": 16, "package": "QFN32", "io_count": 27, "adc_channels": 9},
+        {"part_number": "FM33LE015", "flash_kb": 64, "ram_kb": 16, "package": "LQFP48", "io_count": 40, "adc_channels": 9},
+        {"part_number": "FM33LE016", "flash_kb": 64, "ram_kb": 16, "package": "LQFP64", "io_count": 52, "adc_channels": 12},
+        {"part_number": "FM33LE022", "flash_kb": 128, "ram_kb": 16, "package": "LQFP32/QFN32", "io_count": 20, "adc_channels": 6},
+        {"part_number": "FM33LE023", "flash_kb": 128, "ram_kb": 16, "package": "QFN32", "io_count": 27, "adc_channels": 9},
+        {"part_number": "FM33LE025", "flash_kb": 128, "ram_kb": 16, "package": "LQFP48", "io_count": 40, "adc_channels": 9},
+        {"part_number": "FM33LE026", "flash_kb": 128, "ram_kb": 16, "package": "LQFP64", "io_count": 52, "adc_channels": 12}
+      ]
+    },
+    {
+      "series_name": "FM33LE0xxA (Automotive)",
+      "description": "Automotive-grade low-power 32-bit ARM Cortex-M0+ MCU, AEC-Q100 certified",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+125°C",
+      "certification": "AEC-Q100",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "SAR ADC", "LIN", "Low Power"],
+      "models": [
+        {"part_number": "FM33LE013A", "flash_kb": 64, "ram_kb": 16, "package": "QFN32", "io_count": 27, "adc_channels": 9, "features": ["LIN"]},
+        {"part_number": "FM33LE015A", "flash_kb": 64, "ram_kb": 16, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "features": ["LIN"]},
+        {"part_number": "FM33LE023A", "flash_kb": 128, "ram_kb": 16, "package": "QFN32", "io_count": 27, "adc_channels": 9, "features": ["LIN"]},
+        {"part_number": "FM33LE025A", "flash_kb": 128, "ram_kb": 16, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "features": ["LIN"]}
+      ]
+    },
+    {
+      "series_name": "FM33A0xx",
+      "description": "Smart meter dedicated low-power 32-bit ARM Cortex-M0+ MCU",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 40,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "SAR ADC", "16-bit Sigma-Delta ADC", "Metrology"],
+      "models": [
+        {"part_number": "FM33A022", "flash_kb": 64, "ram_kb": 8, "package": "LQFP64", "io_count": 52, "adc_channels": 12},
+        {"part_number": "FM33A025", "flash_kb": 128, "ram_kb": 16, "package": "LQFP64", "io_count": 52, "adc_channels": 12},
+        {"part_number": "FM33A026", "flash_kb": 128, "ram_kb": 16, "package": "LQFP80", "io_count": 68, "adc_channels": 16},
+        {"part_number": "FM33A028", "flash_kb": 128, "ram_kb": 16, "package": "LQFP100", "io_count": 88, "adc_channels": 16},
+        {"part_number": "FM33A042", "flash_kb": 256, "ram_kb": 24, "package": "LQFP64", "io_count": 52, "adc_channels": 12},
+        {"part_number": "FM33A045", "flash_kb": 256, "ram_kb": 24, "package": "LQFP64", "io_count": 52, "adc_channels": 12},
+        {"part_number": "FM33A046", "flash_kb": 256, "ram_kb": 24, "package": "LQFP80", "io_count": 68, "adc_channels": 16},
+        {"part_number": "FM33A048", "flash_kb": 256, "ram_kb": 24, "package": "LQFP100", "io_count": 88, "adc_channels": 16},
+        {"part_number": "FM33A058", "flash_kb": 256, "ram_kb": 32, "package": "LQFP100", "io_count": 88, "adc_channels": 16},
+        {"part_number": "FM33A0310", "flash_kb": 320, "ram_kb": 32, "package": "LQFP80", "io_count": 68, "adc_channels": 16},
+        {"part_number": "FM33A0410", "flash_kb": 320, "ram_kb": 40, "package": "LQFP100", "io_count": 88, "adc_channels": 16},
+        {"part_number": "FM33A0510", "flash_kb": 320, "ram_kb": 48, "package": "LQFP100", "io_count": 88, "adc_channels": 16},
+        {"part_number": "FM33A0610", "flash_kb": 320, "ram_kb": 64, "package": "LQFP100", "io_count": 88, "adc_channels": 16},
+        {"part_number": "FM33A038", "flash_kb": 384, "ram_kb": 32, "package": "LQFP80", "io_count": 68, "adc_channels": 16},
+        {"part_number": "FM33A068", "flash_kb": 384, "ram_kb": 48, "package": "LQFP100", "io_count": 88, "adc_channels": 16}
+      ]
+    },
+    {
+      "series_name": "FM33A0xxB",
+      "description": "Smart meter MCU variant with enhanced features",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 40,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "SAR ADC", "Enhanced Security"],
+      "models": [
+        {"part_number": "FM33A042B", "flash_kb": 256, "ram_kb": 24, "package": "LQFP64", "io_count": 52},
+        {"part_number": "FM33A045B", "flash_kb": 256, "ram_kb": 24, "package": "LQFP64", "io_count": 52},
+        {"part_number": "FM33A046B", "flash_kb": 256, "ram_kb": 24, "package": "LQFP80", "io_count": 68},
+        {"part_number": "FM33A048B", "flash_kb": 256, "ram_kb": 24, "package": "LQFP100", "io_count": 88}
+      ]
+    },
+    {
+      "series_name": "FM33A0xxEV",
+      "description": "Enhanced smart meter MCU with 16-bit Sigma-Delta ADC",
+      "core": "ARM Cortex-M0",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "16-bit Sigma-Delta ADC", "5xUART", "2xLPUART", "5xSPI", "2xI2C", "Metrology"],
+      "models": [
+        {"part_number": "FM33A045EV", "flash_kb": 256, "ram_kb": 48, "package": "LQFP64", "io_count": 56, "adc_channels": 16},
+        {"part_number": "FM33A046EV", "flash_kb": 256, "ram_kb": 48, "package": "LQFP80", "io_count": 72, "adc_channels": 16},
+        {"part_number": "FM33A048EV", "flash_kb": 256, "ram_kb": 48, "package": "LQFP100", "io_count": 92, "adc_channels": 16},
+        {"part_number": "FM33A0410EV", "flash_kb": 320, "ram_kb": 56, "package": "LQFP100", "io_count": 92, "adc_channels": 16},
+        {"part_number": "FM33A0510EV", "flash_kb": 320, "ram_kb": 64, "package": "LQFP100", "io_count": 92, "adc_channels": 16},
+        {"part_number": "FM33A0610EV", "flash_kb": 320, "ram_kb": 80, "package": "LQFP100", "io_count": 92, "adc_channels": 16},
+        {"part_number": "FM33A065EV", "flash_kb": 384, "ram_kb": 64, "package": "LQFP100", "io_count": 92, "adc_channels": 16},
+        {"part_number": "FM33A066EV", "flash_kb": 384, "ram_kb": 72, "package": "LQFP100", "io_count": 92, "adc_channels": 16},
+        {"part_number": "FM33A068EV", "flash_kb": 384, "ram_kb": 80, "package": "LQFP100", "io_count": 92, "adc_channels": 16}
+      ]
+    },
+    {
+      "series_name": "FM33A0xxEH",
+      "description": "High-capacity smart meter MCU with enhanced memory",
+      "core": "ARM Cortex-M0",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.8V~5.5V (Analog: 2.5V~5.5V)",
+      "temperature_range": "-40°C~+105°C",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "16-bit Sigma-Delta ADC", "12xUART", "5xSPI", "2xI2C", "Metrology"],
+      "models": [
+        {"part_number": "FM33A048EH", "flash_kb": 256, "ram_kb": 48, "package": "LQFP100", "io_count": 92, "adc_channels": 16},
+        {"part_number": "FM33A0610EH", "flash_kb": 512, "ram_kb": 96, "package": "LQFP100", "io_count": 92, "adc_channels": 16}
+      ]
+    },
+    {
+      "series_name": "FM33G0xx",
+      "description": "General purpose low-power 32-bit ARM Cortex-M0+ MCU",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 40,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "SAR ADC", "Low Power"],
+      "models": [
+        {"part_number": "FM33G026", "flash_kb": 128, "ram_kb": 24, "package": "LQFP64", "io_count": 52, "adc_channels": 11},
+        {"part_number": "FM33G043", "flash_kb": 256, "ram_kb": 24, "package": "QFN32", "io_count": 27, "adc_channels": 5},
+        {"part_number": "FM33G045", "flash_kb": 256, "ram_kb": 24, "package": "LQFP48", "io_count": 40, "adc_channels": 9},
+        {"part_number": "FM33G048", "flash_kb": 256, "ram_kb": 24, "package": "LQFP80", "io_count": 68, "adc_channels": 11}
+      ]
+    },
+    {
+      "series_name": "FM33FR0xx",
+      "description": "Low-power MCU with Touch Sensing Interface (TSI)",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 48,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["Touch Sensing Interface (TSI)", "LCD Driver", "RTC with temperature compensation", "AES", "SAR ADC", "Low Power"],
+      "models": [
+        {"part_number": "FM33FR024", "flash_kb": 128, "ram_kb": 16, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "touch_channels": 16},
+        {"part_number": "FM33FR026", "flash_kb": 128, "ram_kb": 16, "package": "LQFP64", "io_count": 52, "adc_channels": 12, "touch_channels": 24},
+        {"part_number": "FM33FR044", "flash_kb": 256, "ram_kb": 24, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "touch_channels": 16},
+        {"part_number": "FM33FR046", "flash_kb": 256, "ram_kb": 24, "package": "LQFP64", "io_count": 52, "adc_channels": 12, "touch_channels": 24},
+        {"part_number": "FM33FR054", "flash_kb": 320, "ram_kb": 32, "package": "LQFP48", "io_count": 40, "adc_channels": 9, "touch_channels": 16},
+        {"part_number": "FM33FR056", "flash_kb": 320, "ram_kb": 32, "package": "LQFP64", "io_count": 52, "adc_channels": 12, "touch_channels": 24},
+        {"part_number": "FM33FR0510", "flash_kb": 320, "ram_kb": 40, "package": "LQFP64", "io_count": 52, "adc_channels": 12, "touch_channels": 24}
+      ]
+    },
+    {
+      "series_name": "FM33LF0xx",
+      "description": "Motor control focused low-power 32-bit ARM Cortex-M0+ MCU",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 72,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+105°C",
+      "features": ["Motor Control", "LCD Driver", "LED Driver", "RTC with temperature compensation", "AES", "OPA", "COMP", "DAC", "CAN", "SENT", "SMBus", "SAR ADC"],
+      "models": [
+        {"part_number": "FM33LF003", "flash_kb": 32, "ram_kb": 4, "package": "QFN32/TSSOP20", "io_count": 16, "adc_channels": 6},
+        {"part_number": "FM33LF005", "flash_kb": 64, "ram_kb": 8, "package": "QFN32/LQFP32", "io_count": 20, "adc_channels": 9},
+        {"part_number": "FM33LF006", "flash_kb": 64, "ram_kb": 8, "package": "LQFP48", "io_count": 36, "adc_channels": 12},
+        {"part_number": "FM33LF013", "flash_kb": 32, "ram_kb": 4, "package": "QFN32/TSSOP20", "io_count": 16, "adc_channels": 6},
+        {"part_number": "FM33LF015", "flash_kb": 64, "ram_kb": 8, "package": "QFN32/LQFP32", "io_count": 20, "adc_channels": 9},
+        {"part_number": "FM33LF016", "flash_kb": 64, "ram_kb": 8, "package": "LQFP48", "io_count": 36, "adc_channels": 12}
+      ]
+    },
+    {
+      "series_name": "FM33LR0xx",
+      "description": "Ultra-low power MCU with RF capability",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["RF", "LCD Driver", "RTC with temperature compensation", "AES", "SAR ADC", "Ultra Low Power"],
+      "models": [
+        {"part_number": "FM33LR024", "flash_kb": 128, "ram_kb": 16, "package": "LQFP48/QFN48", "io_count": 40, "adc_channels": 9},
+        {"part_number": "FM33LR026", "flash_kb": 128, "ram_kb": 16, "package": "LQFP64", "io_count": 52, "adc_channels": 12}
+      ]
+    },
+    {
+      "series_name": "FM33L0xx",
+      "description": "Legacy low-power 32-bit ARM Cortex-M0 MCU",
+      "core": "ARM Cortex-M0",
+      "max_frequency_mhz": 48,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "RTC with temperature compensation", "AES", "OPA", "SAR ADC"],
+      "models": [
+        {"part_number": "FM33L013", "flash_kb": 64, "ram_kb": 16, "package": "QFN32", "io_count": 27, "adc_channels": 9},
+        {"part_number": "FM33L025", "flash_kb": 128, "ram_kb": 16, "package": "LQFP48", "io_count": 44, "adc_channels": 11},
+        {"part_number": "FM33L026", "flash_kb": 128, "ram_kb": 16, "package": "LQFP64", "io_count": 56, "adc_channels": 12}
+      ]
+    },
+    {
+      "series_name": "FM331x",
+      "description": "16-bit low-power MCU with 8xC251 core",
+      "core": "8xC251 (16-bit)",
+      "max_frequency_mhz": 24,
+      "voltage_range": "2.2V~5.5V",
+      "temperature_range": "-40°C~+85°C",
+      "features": ["LCD Driver", "RTC", "Temperature Sensor", "SAR ADC", "Ultra Low Power"],
+      "models": [
+        {"part_number": "FM3312", "flash_kb": 64, "ram_kb": 4, "package": "LQFP48", "io_count": 40, "adc_channels": 8},
+        {"part_number": "FM3312T", "flash_kb": 64, "ram_kb": 4, "package": "LQFP48", "io_count": 40, "adc_channels": 8},
+        {"part_number": "FM3313", "flash_kb": 64, "ram_kb": 4, "package": "LQFP48", "io_count": 40, "adc_channels": 8},
+        {"part_number": "FM3316", "flash_kb": 64, "ram_kb": 4, "package": "LQFP64", "io_count": 52, "adc_channels": 8},
+        {"part_number": "FM3318", "flash_kb": 128, "ram_kb": 4, "package": "LQFP64", "io_count": 52, "adc_channels": 8}
+      ]
+    },
+    {
+      "series_name": "FM33FT0xxA (Automotive Touch)",
+      "description": "Automotive-grade touch MCU with AEC-Q100 certification",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 48,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+105°C",
+      "certification": "AEC-Q100",
+      "features": ["Touch Sensing Interface (TSI)", "LCD Driver", "RTC", "AES", "SAR ADC", "Automotive"],
+      "models": [
+        {"part_number": "FM33FT025A", "flash_kb": 128, "ram_kb": 16, "package": "LQFP48", "io_count": 40, "touch_channels": 16},
+        {"part_number": "FM33FT026A", "flash_kb": 128, "ram_kb": 16, "package": "LQFP64", "io_count": 52, "touch_channels": 24}
+      ]
+    },
+    {
+      "series_name": "FM33FG0xxA (Automotive)",
+      "description": "Automotive-grade MCU with ISO26262 ASIL B safety support",
+      "core": "ARM Cortex-M0+",
+      "max_frequency_mhz": 64,
+      "voltage_range": "1.8V~5.5V",
+      "temperature_range": "-40°C~+105°C",
+      "certification": "AEC-Q100, ISO26262 ASIL B",
+      "features": ["CAN FD", "LIN", "RTC", "AES", "ECC on Flash", "Safety Features"],
+      "models": [
+        {"part_number": "FM33FG055A", "flash_kb": 256, "ram_kb": 32, "package": "LQFP48", "io_count": 40, "features": ["3xCAN (2xCAN FD)"]},
+        {"part_number": "FM33FG056A", "flash_kb": 256, "ram_kb": 32, "package": "LQFP64", "io_count": 52, "features": ["3xCAN (2xCAN FD)"]},
+        {"part_number": "FM33FG0510A", "flash_kb": 512, "ram_kb": 48, "package": "LQFP64", "io_count": 52, "features": ["3xCAN (2xCAN FD)"]}
+      ]
+    },
+    {
+      "series_name": "FM33FK5xx (High Performance)",
+      "description": "High-performance MCU with ARM Cortex-M33 and DSP",
+      "core": "ARM Cortex-M33 (ARMv8-M)",
+      "max_frequency_mhz": 80,
+      "voltage_range": "1.8V~5.5V (1.8V~3.6V with USB)",
+      "temperature_range": "-40°C~+105°C",
+      "features": ["FPU", "DSP Instructions", "I-Cache", "QSPI with XIP", "USB 2.0", "CAN FD", "5Msps ADC", "DAC"],
+      "models": [
+        {"part_number": "FM33FK548", "flash_kb": 256, "ram_kb": 48, "package": "LQFP48", "io_count": 40},
+        {"part_number": "FM33FK564", "flash_kb": 256, "ram_kb": 48, "package": "LQFP64", "io_count": 52},
+        {"part_number": "FM33FK580", "flash_kb": 256, "ram_kb": 48, "package": "LQFP80", "io_count": 68},
+        {"part_number": "FM33FK5100", "flash_kb": 256, "ram_kb": 48, "package": "LQFP100", "io_count": 88}
+      ]
+    }
+  ],
+  "summary": {
+    "total_series": 18,
+    "total_models": 115,
+    "series_breakdown": {
+      "FM33LC0xx": 18,
+      "FM33LG0xx": 7,
+      "FM33LG0xxA (Automotive)": 6,
+      "FM33LE0xx": 8,
+      "FM33LE0xxA (Automotive)": 4,
+      "FM33A0xx": 14,
+      "FM33A0xxB": 4,
+      "FM33A0xxEV": 9,
+      "FM33A0xxEH": 2,
+      "FM33G0xx": 4,
+      "FM33FR0xx": 7,
+      "FM33LF0xx": 6,
+      "FM33LR0xx": 2,
+      "FM33L0xx": 3,
+      "FM331x (16-bit)": 5,
+      "FM33FT0xxA (Automotive Touch)": 2,
+      "FM33FG0xxA (Automotive)": 3,
+      "FM33FK5xx (High Performance)": 4
+    },
+    "core_types": {
+      "ARM Cortex-M0": 32,
+      "ARM Cortex-M0+": 76,
+      "ARM Cortex-M33": 4,
+      "8xC251 (16-bit)": 5
+    }
+  }
+}

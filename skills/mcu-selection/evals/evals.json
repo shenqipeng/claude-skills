@@ -1,0 +1,252 @@
+{
+  "description": "MCU Selection Skill Evaluation Test Cases",
+  "version": "1.0.0",
+  "test_suites": [
+    {
+      "name": "Basic Requirements Matching",
+      "tests": [
+        {
+          "id": "basic_001",
+          "description": "Select MCU with basic UART and ADC requirements",
+          "input": {
+            "message": "I need an MCU with at least 2 UART channels and 10-bit ADC with 8+ channels, 32KB+ Flash",
+            "context": {}
+          },
+          "expected": {
+            "results_count": 3,
+            "top_candidates": ["should have uart_count >= 2", "should have adc_channels >= 8"],
+            "flash_min_kb": 32,
+            "reasoning": "should explain why the top candidate was selected"
+          },
+          "keywords": ["UART", "ADC", "8 channels"]
+        },
+        {
+          "id": "basic_002",
+          "description": "Filter by Flash size requirement",
+          "input": {
+            "message": "Find MCU with minimum 256KB Flash for data logging application",
+            "context": {}
+          },
+          "expected": {
+            "results_count": 3,
+            "all_have_flash_kb": 256,
+            "reasoning": "should mention data logging as use case"
+          },
+          "keywords": ["256KB", "Flash", "data logging"]
+        }
+      ]
+    },
+    {
+      "name": "Manufacturer Preference",
+      "tests": [
+        {
+          "id": "mfg_001",
+          "description": "Prefer specific manufacturer when specified",
+          "input": {
+            "message": "I want a GigaDevice MCU with CAN bus and USB support",
+            "context": {}
+          },
+          "expected": {
+            "manufacturer": "GigaDevice",
+            "must_have_peripherals": ["CAN", "USB"],
+            "reasoning": "should explain why GigaDevice was chosen"
+          },
+          "keywords": ["GigaDevice", "CAN", "USB"]
+        },
+        {
+          "id": "mfg_002",
+          "description": "No preference - show multiple manufacturers",
+          "input": {
+            "message": "Need MCU with LCD controller, 64 pins, working temperature -40 to 85°C",
+            "context": {}
+          },
+          "expected": {
+            "results_count": 3,
+            "manufacturers_covered": 2,
+            "must_have_peripherals": ["LCDC"],
+            "pins_min": 48,
+            "temp_range": "-40 to 85"
+          },
+          "keywords": ["LCD", "64 pins", "temperature"]
+        }
+      ]
+    },
+    {
+      "name": "Special Features",
+      "tests": [
+        {
+          "id": "special_001",
+          "description": "RISC-V core requirement",
+          "input": {
+            "message": "Looking for RISC-V based MCU for open-source project, need USB peripheral",
+            "context": {}
+          },
+          "expected": {
+            "core_type": "RISC-V",
+            "must_have_peripherals": ["USB"],
+            "reasoning": "should highlight RISC-V as key requirement"
+          },
+          "keywords": ["RISC-V", "USB", "open-source"]
+        },
+        {
+          "id": "special_002",
+          "description": "Automotive grade requirement",
+          "input": {
+            "message": "Need automotive grade MCU with operating temp -40 to 125°C",
+            "context": {}
+          },
+          "expected": {
+            "temp_range": "-40 to 125",
+            "automotive": true,
+            "reasoning": "should emphasize automotive grade"
+          },
+          "keywords": ["automotive", "125°C", "temperature"]
+        },
+        {
+          "id": "special_003",
+          "description": "Ethernet requirement",
+          "input": {
+            "message": "MCU for industrial IoT gateway, needs Ethernet, 5 UART, and USB host",
+            "context": {}
+          },
+          "expected": {
+            "must_have_peripherals": ["ETH", "USB", "UART"],
+            "uart_min": 5,
+            "reasoning": "should explain IoT gateway use case"
+          },
+          "keywords": ["Ethernet", "UART", "USB", "IoT"]
+        }
+      ]
+    },
+    {
+      "name": "Package Constraints",
+      "tests": [
+        {
+          "id": "pkg_001",
+          "description": "QFN32 package requirement",
+          "input": {
+            "message": "Space constrained design, need QFN32 package MCU with I2C and SPI",
+            "context": {}
+          },
+          "expected": {
+            "packages": ["QFN32"],
+            "must_have_peripherals": ["I2C", "SPI"],
+            "reasoning": "should note space constraint importance"
+          },
+          "keywords": ["QFN32", "I2C", "SPI", "small"]
+        },
+        {
+          "id": "pkg_002",
+          "description": "5V tolerant requirement",
+          "input": {
+            "message": "Need MCU that can interface directly with 5V logic, prefer QFP package",
+            "context": {}
+          },
+          "expected": {
+            "voltage_range_max": 5.5,
+            "packages": ["QFP"],
+            "reasoning": "should note 5V tolerance"
+          },
+          "keywords": ["5V", "QFP", "logic"]
+        }
+      ]
+    },
+    {
+      "name": "Edge Cases",
+      "tests": [
+        {
+          "id": "edge_001",
+          "description": "Very specific requirements with limited matches",
+          "input": {
+            "message": "Need RISC-V MCU with CAN, USB OTG, Ethernet, and LCD in QFP64",
+            "context": {}
+          },
+          "expected": {
+            "results_count": "1-2",
+            "special_case": "limited_matches",
+            "reasoning": "should warn about limited options"
+          },
+          "keywords": ["RISC-V", "CAN", "USB OTG", "Ethernet", "LCD"]
+        },
+        {
+          "id": "edge_002",
+          "description": "No exact match - suggest workarounds",
+          "input": {
+            "message": "Looking for MCU with built-in BLE 5.0, 100+ GPIO, and 2MB Flash",
+            "context": {}
+          },
+          "expected": {
+            "special_case": "no_exact_match",
+            "suggestion": "should suggest external BLE module or relaxed requirements",
+            "reasoning": "should explain limitations"
+          },
+          "keywords": ["BLE", "GPIO", "Flash"]
+        },
+        {
+          "id": "edge_003",
+          "description": "Budget constraint",
+          "input": {
+            "message": "Need cheapest MCU under $2 with at least 1 UART and 16KB Flash",
+            "context": {
+              "budget": 2,
+              "currency": "USD"
+            }
+          },
+          "expected": {
+            "special_case": "budget_constrained",
+            "reasoning": "should mention price/availability check"
+          },
+          "keywords": ["cheapest", "under $2", "budget"]
+        }
+      ]
+    },
+    {
+      "name": "Output Format Validation",
+      "tests": [
+        {
+          "id": "format_001",
+          "description": "Output should follow template format",
+          "input": {
+            "message": "Select MCU for LED controller: PWM, 3 timers, 8KB Flash minimum",
+            "context": {}
+          },
+          "expected": {
+            "output_format": "markdown",
+            "has_sections": ["Requirements Summary", "Top Candidates", "Why recommended"],
+            "table_format": "should have spec tables",
+            "reasoning": "should be in markdown with proper formatting"
+          },
+          "keywords": ["PWM", "Timer", "LED"]
+        },
+        {
+          "id": "format_002",
+          "description": "Price check should be suggested when relevant",
+          "input": {
+            "message": "Need MCU for production - 1000 units, with best unit price",
+            "context": {
+              "quantity": 1000,
+              "priority": "price"
+            }
+          },
+          "expected": {
+            "suggest_price_check": true,
+            "price_query_command": "python scripts/price_query.py",
+            "reasoning": "should suggest running price query for volume pricing"
+          },
+          "keywords": ["production", "1000", "unit price"]
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "correct_manufacturer_match": 10,
+    "correct_peripheral_match": 5,
+    "correct_flash_size": 3,
+    "correct_pin_count": 2,
+    "correct_package": 2,
+    "proper_reasoning": 5,
+    "output_format_correct": 3,
+    "partial_match_penalty": -2
+  },
+  "total_tests": 13
+}

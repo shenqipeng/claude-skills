@@ -1,0 +1,32 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "YOUR_API_BASE_URL",
+    "ANTHROPIC_AUTH_TOKEN": "YOUR_API_KEY",
+    "ANTHROPIC_MODEL": "YOUR_DEFAULT_MODEL",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "YOUR_HAIKU_MODEL",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "YOUR_SONNET_MODEL",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "YOUR_OPUS_MODEL",
+    "ANTHROPIC_REASONING_MODEL": "YOUR_REASONING_MODEL"
+  },
+  "permissions": {
+    "allow": [],
+    "additionalDirectories": [
+      "YOUR_HOME_DIR/.claude"
+    ]
+  },
+  "model": "YOUR_DEFAULT_MODEL",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"YOUR_HOME_DIR/.claude/hooks/run-hook.cmd\" session-start",
+            "async": false
+          }
+        ]
+      }
+    ]
+  }
+}

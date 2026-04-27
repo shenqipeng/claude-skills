@@ -1,0 +1,14 @@
+# Sensitive files
+settings.json
+settings.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*~
+
+# Binary/archive files in skills
+*.zip

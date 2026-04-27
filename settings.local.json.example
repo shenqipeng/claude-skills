@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(gh repo *)",
+      "Bash(gh api *)",
+      "Bash(gh auth *)",
+      "Bash(gh issue *)",
+      "Bash(git config *)",
+      "Bash(curl -s *)",
+      "Bash(curl -sL *)",
+      "Bash(node -e ' *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \" *)",
+      "Bash(npm list *)",
+      "Bash(npx skills *)",
+      "Bash(claude plugins *)",
+      "Bash(claude plugin *)"
+    ],
+    "additionalDirectories": [
+      "YOUR_HOME_DIR/.claude"
+    ]
+  }
+}

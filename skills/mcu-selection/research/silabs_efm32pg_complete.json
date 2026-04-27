@@ -1,0 +1,667 @@
+{
+  "series": "EFM32PG (Pearl Gecko) Series 2",
+  "manufacturer": "Silicon Labs",
+  "url": "https://www.silabs.com/mcu/32-bit-microcontrollers/efm32-pearl-gecko-series-2",
+  "last_updated": "2025-03-24",
+  "families": [
+    {
+      "family_name": "EFM32PG22",
+      "core": "ARM Cortex-M33",
+      "max_frequency_mhz": 76.8,
+      "description": "Ultra-low power MCU with pin and software compatibility to EFR32xG22 wireless SoC platform",
+      "common_features": [
+        "Secure Boot with Root of Trust and Secure Loader (RTSL)",
+        "16-bit ADC with 16-channel scan",
+        "AEC-Q100 Grade 1 qualified options available",
+        "ARM TrustZone",
+        "True Random Number Generator (TRNG)",
+        "Secure Debug with lock/unlock"
+      ],
+      "power_consumption": {
+        "active_ua_per_mhz": 27,
+        "em2_sleep_ua_with_8kb_ram": 1.1,
+        "em4_sleep_ua_with_rtc": 0.5
+      },
+      "packages": [
+        {
+          "type": "QFN32",
+          "size_mm": "4x4",
+          "height_mm": 0.85,
+          "gpio_count": 18
+        },
+        {
+          "type": "QFN40",
+          "size_mm": "5x5",
+          "height_mm": 0.85,
+          "gpio_count": 26
+        }
+      ],
+      "peripherals": {
+        "usart": 3,
+        "eusart": 1,
+        "i2c": 2,
+        "spi": 2,
+        "timers_16bit": 4,
+        "timers_32bit": 1,
+        "rtc": true,
+        "lcd": false,
+        "adc": "12-bit @ 1 Msps, 16-bit @ 76.9 ksps",
+        "comparators": 2,
+        "dac": false,
+        "temperature_sensor": true
+      },
+      "models": [
+        {
+          "part_number": "EFM32PG22C200F64IM32",
+          "flash_kb": 64,
+          "ram_kb": 32,
+          "gpio": 18,
+          "package": "QFN32",
+          "package_size_mm": "4x4",
+          "temp_range_c": "-40 to +125",
+          "aec_q100": false,
+          "security": "Secure Boot with RTSL"
+        },
+        {
+          "part_number": "EFM32PG22C200F64IM40",
+          "flash_kb": 64,
+          "ram_kb": 32,
+          "gpio": 26,
+          "package": "QFN40",
+          "package_size_mm": "5x5",
+          "temp_range_c": "-40 to +125",
+          "aec_q100": true,
+          "security": "Secure Boot with RTSL"
+        },
+        {
+          "part_number": "EFM32PG22C200F128IM32",
+          "flash_kb": 128,
+          "ram_kb": 32,
+          "gpio": 18,
+          "package": "QFN32",
+          "package_size_mm": "4x4",
+          "temp_range_c": "-40 to +125",
+          "aec_q100": false,
+          "security": "Secure Boot with RTSL"
+        },
+        {
+          "part_number": "EFM32PG22C200F128IM40",
+          "flash_kb": 128,
+          "ram_kb": 32,
+          "gpio": 26,
+          "package": "QFN40",
+          "package_size_mm": "5x5",
+          "temp_range_c": "-40 to +125",
+          "aec_q100": true,
+          "security": "Secure Boot with RTSL"
+        },
+        {
+          "part_number": "EFM32PG22C200F256IM32",
+          "flash_kb": 256,
+          "ram_kb": 32,
+          "gpio": 18,
+          "package": "QFN32",
+          "package_size_mm": "4x4",
+          "temp_range_c": "-40 to +125",
+          "aec_q100": false,
+          "security": "Secure Boot with RTSL"
+        },
+        {
+          "part_number": "EFM32PG22C200F256IM40",
+          "flash_kb": 256,
+          "ram_kb": 32,
+          "gpio": 26,
+          "package": "QFN40",
+          "package_size_mm": "5x5",
+          "temp_range_c": "-40 to +125",
+          "aec_q100": true,
+          "security": "Secure Boot with RTSL"
+        },
+        {
+          "part_number": "EFM32PG22C200F512IM32",
+          "flash_kb": 512,
+          "ram_kb": 32,
+          "gpio": 18,
+          "package": "QFN32",
+          "package_size_mm": "4x4",
+          "temp_range_c": "-40 to +125",
+          "aec_q100": false,
+          "security": "Secure Boot with RTSL"
+        },
+        {
+          "part_number": "EFM32PG22C200F512IM40",
+          "flash_kb": 512,
+          "ram_kb": 32,
+          "gpio": 26,
+          "package": "QFN40",
+          "package_size_mm": "5x5",
+          "temp_range_c": "-40 to +125",
+          "aec_q100": true,
+          "security": "Secure Boot with RTSL"
+        }
+      ]
+    },
+    {
+      "family_name": "EFM32PG23",
+      "core": "ARM Cortex-M33",
+      "max_frequency_mhz": 80,
+      "description": "Ultra-low power MCU with software compatibility to EFR32xG23 wireless SoC platform (FG23, ZG23)",
+      "common_features": [
+        "Secure Vault High security",
+        "Integrated Low-Energy LCD Controller (up to 192 segments)",
+        "High Accuracy ADC (up to 16-bit ENOB)",
+        "Keypad scanner (6x8 matrix)",
+        "ARM TrustZone",
+        "Secure Boot with RTSL"
+      ],
+      "power_consumption": {
+        "active_ua_per_mhz": 21,
+        "em2_sleep_ua_with_16kb_ram": 1.03,
+        "em4_sleep_ua_with_rtc": 0.7
+      },
+      "packages": [
+        {
+          "type": "QFN40",
+          "size_mm": "5x5",
+          "height_mm": 0.85,
+          "gpio_count": 29
+        },
+        {
+          "type": "QFN48",
+          "size_mm": "6x6",
+          "height_mm": 0.85,
+          "gpio_count": 32
+        }
+      ],
+      "peripherals": {
+        "usart": 1,
+        "eusart": 3,
+        "i2c": 2,
+        "spi": 3,
+        "timers_16bit": 4,
+        "timers_32bit": 1,
+        "rtc": true,
+        "lcd": true,
+        "lcd_segments": 192,
+        "adc": "12-bit @ 1 Msps, High Accuracy Mode up to 16-bit",
+        "comparators": 2,
+        "dac": false,
+        "temperature_sensor": true,
+        "keypad_scanner": "6x8 matrix"
+      },
+      "models": [
+        {
+          "part_number": "EFM32PG23B200F64IM40",
+          "flash_kb": 64,
+          "ram_kb": 32,
+          "gpio": 29,
+          "package": "QFN40",
+          "package_size_mm": "5x5",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B200F128IM40",
+          "flash_kb": 128,
+          "ram_kb": 64,
+          "gpio": 29,
+          "package": "QFN40",
+          "package_size_mm": "5x5",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B200F256IM40",
+          "flash_kb": 256,
+          "ram_kb": 64,
+          "gpio": 29,
+          "package": "QFN40",
+          "package_size_mm": "5x5",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B200F512IM40",
+          "flash_kb": 512,
+          "ram_kb": 64,
+          "gpio": 29,
+          "package": "QFN40",
+          "package_size_mm": "5x5",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B210F64IM48",
+          "flash_kb": 64,
+          "ram_kb": 32,
+          "gpio": 32,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B210F128IM48",
+          "flash_kb": 128,
+          "ram_kb": 64,
+          "gpio": 32,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B210F256IM48",
+          "flash_kb": 256,
+          "ram_kb": 64,
+          "gpio": 32,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B210F512IM48",
+          "flash_kb": 512,
+          "ram_kb": 64,
+          "gpio": 32,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B310F64IM48",
+          "flash_kb": 64,
+          "ram_kb": 32,
+          "gpio": 32,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B310F128IM48",
+          "flash_kb": 128,
+          "ram_kb": 64,
+          "gpio": 32,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B310F256IM48",
+          "flash_kb": 256,
+          "ram_kb": 64,
+          "gpio": 32,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High"
+        },
+        {
+          "part_number": "EFM32PG23B310F512IM48",
+          "flash_kb": 512,
+          "ram_kb": 64,
+          "gpio": 32,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High"
+        }
+      ]
+    },
+    {
+      "family_name": "EFM32PG26",
+      "core": "ARM Cortex-M33",
+      "max_frequency_mhz": 80,
+      "description": "High-performance MCU with LCD controller, AI/ML hardware accelerator, and software compatibility to EFR32xG26 (BG26, MG26)",
+      "common_features": [
+        "AI/ML Hardware Accelerator (Matrix Vector Processor)",
+        "Secure Vault High (PSA Level 3 certified)",
+        "Integrated Low-Energy LCD Controller (up to 4x40 segments)",
+        "Up to 3.2 MB Flash and 512 KB RAM",
+        "High Speed IADC (up to 2 Msps)",
+        "Keypad scanner (6x8 matrix)"
+      ],
+      "power_consumption": {
+        "active_ua_per_mhz": 42.8,
+        "em2_sleep_ua_with_16kb_ram": 1.4
+      },
+      "packages": [
+        {
+          "type": "QFN48",
+          "size_mm": "6x6",
+          "height_mm": 0.85,
+          "gpio_count": 28
+        },
+        {
+          "type": "QFN68",
+          "size_mm": "8x8",
+          "height_mm": 0.85,
+          "gpio_count": 48
+        },
+        {
+          "type": "BGA136",
+          "size_mm": "7x7",
+          "height_mm": 0.82,
+          "gpio_count": 64
+        }
+      ],
+      "peripherals": {
+        "usart": 3,
+        "eusart": 4,
+        "i2c": 4,
+        "spi": 4,
+        "timers_16bit": 6,
+        "timers_32bit": 4,
+        "rtc": true,
+        "lcd": true,
+        "lcd_segments": 160,
+        "adc": "16-bit up to 2 Msps, High Accuracy Mode up to 16-bit ENOB",
+        "comparators": 2,
+        "dac": "2-channel VDAC",
+        "temperature_sensor": true,
+        "keypad_scanner": "6x8 matrix",
+        "ai_ml_accelerator": "Matrix Vector Processor"
+      },
+      "models": [
+        {
+          "part_number": "EFM32PG26B101F512IL136",
+          "flash_kb": 512,
+          "ram_kb": 128,
+          "gpio": 64,
+          "package": "BGA136",
+          "package_size_mm": "7x7",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B101F512IM68",
+          "flash_kb": 512,
+          "ram_kb": 128,
+          "gpio": 48,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B301F1024IL136",
+          "flash_kb": 1024,
+          "ram_kb": 256,
+          "gpio": 64,
+          "package": "BGA136",
+          "package_size_mm": "7x7",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B301F1024IM68",
+          "flash_kb": 1024,
+          "ram_kb": 256,
+          "gpio": 48,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B301F2048IL136",
+          "flash_kb": 2048,
+          "ram_kb": 256,
+          "gpio": 64,
+          "package": "BGA136",
+          "package_size_mm": "7x7",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B301F2048IM68",
+          "flash_kb": 2048,
+          "ram_kb": 256,
+          "gpio": 48,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B500F3200IL136",
+          "flash_kb": 3200,
+          "ram_kb": 512,
+          "gpio": 64,
+          "package": "BGA136",
+          "package_size_mm": "7x7",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B500F3200IM48",
+          "flash_kb": 3200,
+          "ram_kb": 512,
+          "gpio": 28,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B500F3200IM68",
+          "flash_kb": 3200,
+          "ram_kb": 512,
+          "gpio": 48,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B501F3200IL136",
+          "flash_kb": 3200,
+          "ram_kb": 512,
+          "gpio": 64,
+          "package": "BGA136",
+          "package_size_mm": "7x7",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B501F3200IM48",
+          "flash_kb": 3200,
+          "ram_kb": 512,
+          "gpio": 28,
+          "package": "QFN48",
+          "package_size_mm": "6x6",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        },
+        {
+          "part_number": "EFM32PG26B501F3200IM68",
+          "flash_kb": 3200,
+          "ram_kb": 512,
+          "gpio": 48,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true
+        }
+      ]
+    },
+    {
+      "family_name": "EFM32PG28",
+      "core": "ARM Cortex-M33",
+      "max_frequency_mhz": 80,
+      "description": "First EFM32 device with hardware AI/ML accelerator, LCD controller, and software compatibility to EFR32xG28 (ZG28, FG28, SG28)",
+      "common_features": [
+        "AI/ML Hardware Accelerator (Matrix Vector Processor)",
+        "Secure Vault High",
+        "Integrated Low-Energy LCD Controller (up to 192 segments)",
+        "Up to 1024 KB Flash and 256 KB RAM",
+        "High Accuracy IADC",
+        "Keypad scanner (6x8 matrix)"
+      ],
+      "power_consumption": {
+        "active_ua_per_mhz": 26,
+        "em2_sleep_ua_with_16kb_ram": 1.1,
+        "em2_sleep_ua_with_256kb_ram": 2.6
+      },
+      "packages": [
+        {
+          "type": "QFN68",
+          "size_mm": "8x8",
+          "height_mm": 0.85,
+          "gpio_count": 51
+        }
+      ],
+      "peripherals": {
+        "usart": 1,
+        "eusart": 3,
+        "i2c": 2,
+        "spi": 3,
+        "timers_16bit": 4,
+        "timers_32bit": 1,
+        "rtc": true,
+        "lcd": true,
+        "lcd_segments": 192,
+        "adc": "12, 16, or 20-bit output, High Speed Mode up to 1 Msps",
+        "comparators": 2,
+        "dac": "2-channel VDAC",
+        "temperature_sensor": true,
+        "keypad_scanner": "6x8 matrix",
+        "ai_ml_accelerator": "Matrix Vector Processor",
+        "lesense": true
+      },
+      "models": [
+        {
+          "part_number": "EFM32PG28B200F512IM68",
+          "flash_kb": 512,
+          "ram_kb": 128,
+          "gpio": 51,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true,
+          "adc_type": "12-bit, 12-ch., 1 Msps"
+        },
+        {
+          "part_number": "EFM32PG28B300F512IM68",
+          "flash_kb": 512,
+          "ram_kb": 128,
+          "gpio": 51,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true,
+          "adc_type": "12-bit, 12-ch., 1 Msps"
+        },
+        {
+          "part_number": "EFM32PG28B210F1024IM68",
+          "flash_kb": 1024,
+          "ram_kb": 256,
+          "gpio": 51,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": false,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true,
+          "adc_type": "20-bit, 12-ch., 15.6 ksps"
+        },
+        {
+          "part_number": "EFM32PG28B310F1024IM68",
+          "flash_kb": 1024,
+          "ram_kb": 256,
+          "gpio": 51,
+          "package": "QFN68",
+          "package_size_mm": "8x8",
+          "temp_range_c": "-40 to +125",
+          "lcd_support": true,
+          "iadc_high_speed": true,
+          "security": "Secure Vault High",
+          "ai_ml_accelerator": true,
+          "adc_type": "20-bit, 12-ch., 15.6 ksps"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_models": 44,
+    "families_count": 4,
+    "flash_range_kb": "64 - 3200",
+    "ram_range_kb": "32 - 512",
+    "frequency_range_mhz": "76.8 - 80",
+    "packages_available": ["QFN32", "QFN40", "QFN48", "QFN68", "BGA136"],
+    "lcd_support_families": ["EFM32PG23", "EFM32PG26", "EFM32PG28"],
+    "ai_ml_accelerator_families": ["EFM32PG26", "EFM32PG28"],
+    "automotive_grade_available": true
+  }
+}

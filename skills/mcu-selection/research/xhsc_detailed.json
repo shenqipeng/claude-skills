@@ -1,0 +1,585 @@
+{
+  "manufacturer": "XHSC (小华半导体)",
+  "website": "https://www.xhsc.com.cn",
+  "date_collected": "2025-03-24",
+  "series": {
+    "HC32F0_Entry": {
+      "description": "Entry-level general purpose MCUs (Cortex-M0+)",
+      "models": [
+        {
+          "part_number": "HC32F002",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 18,
+          "ram_kb": 2,
+          "packages": ["QFN24", "QFN20", "TSSOP24", "TSSOP20"],
+          "gpio": "22IO/24PIN, 18IO/20PIN",
+          "voltage": "1.7~5.5V",
+          "temperature": "-20~105°C, -40~105°C",
+          "peripherals": {
+            "timers": ["1x复合定时器(通用/基本)", "1x高级16位定时器", "1x低功耗16位定时器", "1x看门狗", "1x窗口看门狗", "SysTick"],
+            "communication": ["2xLPUART", "1xSPI", "1xI2C"],
+            "adc": "10位1Msps SAR ADC",
+            "other": ["蜂鸣器频率发生器", "128字节OTP", "10字节唯一ID", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32F003",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 32,
+          "flash_kb": 16,
+          "ram_kb": 2,
+          "packages": ["QFN20", "TSSOP20", "TSSOP16"],
+          "gpio": "16IO/20pin, 12IO/16pin",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "peripherals": {
+            "timers": ["3x通用16位定时器", "3x高性能16位定时器(PWM)", "1x低功耗16位定时器", "1x可编程16位定时器", "1x20位看门狗", "RTC"],
+            "communication": ["2xUART", "1xLPUART", "1xSPI", "1xI2C"],
+            "adc": "12位1Msps SAR ADC",
+            "other": ["蜂鸣器发生器", "CRC-16", "10字节唯一ID", "6位DAC", "2x电压比较器", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32F005",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 32,
+          "flash_kb": 32,
+          "ram_kb": 4,
+          "packages": ["QFN20", "TSSOP20", "TSSOP16"],
+          "gpio": "16IO/20pin, 12IO/16pin",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "peripherals": {
+            "timers": ["3x通用16位定时器", "3x高性能16位定时器(PWM)", "1x低功耗16位定时器", "1x可编程16位定时器", "1x20位看门狗", "RTC"],
+            "communication": ["2xUART", "1xLPUART", "1xSPI", "1xI2C"],
+            "adc": "12位1Msps SAR ADC",
+            "other": ["蜂鸣器发生器", "CRC-16", "10字节唯一ID", "6位DAC", "2x电压比较器", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32F030",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 64,
+          "ram_kb": 8,
+          "packages": ["QFN32", "QFN48", "LQFP64", "LQFP48", "TSSOP28"],
+          "gpio": "56IO/64pin, 40IO/48pin, 26IO/32pin, 23IO/28pin",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "peripherals": {
+            "timers": ["3x通用16位定时器", "1x高级16位定时器(3相PWM)", "1x低功耗16位定时器", "1x20位看门狗", "RTC"],
+            "communication": ["2xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC, 17通道",
+            "other": ["蜂鸣器发生器", "CRC-16/32", "32位除法器", "AES128", "TRNG", "10字节唯一ID", "3x运放", "6位DAC", "2x电压比较器", "LCD驱动(4*40/6*38/8*36)", "2通道DMA", "LVD"]
+          }
+        }
+      ]
+    },
+    "HC32F1_Mainstream": {
+      "description": "Mainstream general purpose MCUs (Cortex-M0+)",
+      "models": [
+        {
+          "part_number": "HC32F115",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 32,
+          "flash_kb": 64,
+          "ram_kb": 4,
+          "packages": ["LQFP32", "LQFP44"],
+          "gpio": "28~40",
+          "voltage": "2.7~5.5V",
+          "temperature": "-40~105°C",
+          "peripherals": {
+            "timers": ["1x16位通用定时器(Timer0)", "8x16位多功能定时器(TimerB)", "RTC(1ppm校准)"],
+            "communication": ["4xUSART(1xLIN)", "1xI2C", "1xSPI"],
+            "adc": "12位1MSPS, 12通道",
+            "other": ["96位唯一ID", "IO驱动20mA输出/10mA灌电流"]
+          }
+        },
+        {
+          "part_number": "HC32F120",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 64,
+          "ram_kb": 8,
+          "packages": ["QFN32", "QFN48", "LQFP64", "LQFP48", "TSSOP28"],
+          "gpio": "56IO/64pin, 40IO/48pin, 26IO/32pin, 23IO/28pin",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "note": "Pin-compatible with HC32L130",
+          "peripherals": {
+            "timers": ["3x通用16位定时器", "1x高级16位定时器", "1x低功耗16位定时器", "1x20位看门狗", "RTC"],
+            "communication": ["2xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC, 17通道",
+            "other": ["蜂鸣器发生器", "CRC-16/32", "32位除法器", "AES128", "TRNG", "10字节唯一ID", "3x运放", "6位DAC", "2x电压比较器", "LCD驱动", "2通道DMA", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32F140",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 128,
+          "ram_kb": 16,
+          "packages": ["LQFP100", "LQFP64", "LQFP48", "QFN32"],
+          "gpio": "86IO/100PIN, 50IO/64PIN, 36IO/48PIN, 25IO/32PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "note": "Shared with HC32F072 peripherals",
+          "peripherals": {
+            "timers": ["3x通用16位定时器", "1x高级16位定时器", "3x高性能16位定时器", "1x可编程16位定时器", "1x20位看门狗", "RTC"],
+            "communication": ["4xUART", "2xLPUART", "2xSPI", "2xI2C", "2xI2S", "1xUSB(FS Device)", "1xCAN 2.0B"],
+            "adc": "12位1Msps SAR ADC",
+            "dac": "2x12位500Ksps DAC",
+            "other": ["蜂鸣器发生器", "CRC-16/32", "32位除法器", "AES-128/192/256", "TRNG", "10字节唯一ID", "5x运放", "3x电压比较器", "LVD", "2通道DMA"]
+          }
+        },
+        {
+          "part_number": "HC32F160",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 256,
+          "ram_kb": 32,
+          "packages": ["LQFP100", "LQFP80", "LQFP64", "LQFP48", "QFN32"],
+          "gpio": "88IO/100PIN, 72IO/80PIN, 56IO/64PIN, 40IO/48PIN, 26IO/32PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "note": "Shared with HC32F196 peripherals",
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "3x高性能16位定时器", "1x可编程16位定时器(PCA)", "1x20位看门狗", "RTC"],
+            "communication": ["4xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC, 16通道",
+            "dac": "1x12位500Ksps DAC",
+            "other": ["蜂鸣器发生器", "CRC16/32", "AES-128/192/256", "TRNG", "10字节唯一ID", "1x运放", "3x电压比较器", "LCD驱动(4*52/6*50/8*48)", "2通道DMA", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32F190",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 256,
+          "ram_kb": 32,
+          "packages": ["LQFP100", "LQFP80", "LQFP64", "LQFP48", "QFN32"],
+          "gpio": "88IO/100PIN, 72IO/80PIN, 56IO/64PIN, 40IO/48PIN, 26IO/32PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "3x高性能16位定时器", "1x可编程16位定时器(PCA)", "1x20位看门狗", "RTC"],
+            "communication": ["4xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC, 16通道",
+            "dac": "1x12位500Ksps DAC",
+            "other": ["蜂鸣器发生器", "CRC16/32", "AES-128/192/256", "TRNG", "10字节唯一ID", "1x运放", "3x电压比较器", "LCD驱动(4*52/6*50/8*48)", "2通道DMA", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32F196",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 256,
+          "ram_kb": 32,
+          "packages": ["LQFP100", "LQFP80", "LQFP64", "LQFP48", "QFN32"],
+          "gpio": "88IO/100PIN, 72IO/80PIN, 56IO/64PIN, 40IO/48PIN, 26IO/32PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "3x高性能16位定时器", "1x可编程16位定时器(PCA)", "1x20位看门狗", "RTC"],
+            "communication": ["4xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC, 16通道",
+            "dac": "1x12位500Ksps DAC",
+            "other": ["蜂鸣器发生器", "CRC16/32", "AES-128/192/256", "TRNG", "10字节唯一ID", "1x运放", "3x电压比较器", "LCD驱动(4*52/6*50/8*48)", "2通道DMA", "LVD"]
+          }
+        }
+      ]
+    },
+    "HC32L_LowPower": {
+      "description": "Ultra-low power MCUs (Cortex-M0+)",
+      "models": [
+        {
+          "part_number": "HC32L110",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 32,
+          "flash_kb": "16/32",
+          "ram_kb": "2/4",
+          "packages": ["QFN20", "TSSOP20", "TSSOP16", "CSP16"],
+          "gpio": "16IO/20pin, 12IO/16pin",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "power_consumption": {
+            "deep_sleep_ua": 0.5,
+            "deep_sleep_rtc_ua": 1.0,
+            "low_speed_ua": 6,
+            "sleep_ua_per_mhz": 20,
+            "active_ua_per_mhz": 120
+          },
+          "peripherals": {
+            "timers": ["3x通用16位定时器", "3x高性能16位定时器", "1x低功耗16位定时器", "1x可编程16位定时器", "1x20位看门狗", "RTC"],
+            "communication": ["2xUART", "1xLPUART", "1xSPI", "1xI2C"],
+            "adc": "12位1Msps SAR ADC",
+            "other": ["蜂鸣器发生器", "CRC-16", "10字节唯一ID", "6位DAC", "2x电压比较器", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32L021",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 64,
+          "ram_kb": 6,
+          "packages": ["QFN20", "TSSOP20", "QFN14"],
+          "gpio": "17IO/20pin, 10IO/14pin",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~105°C",
+          "power_consumption": {
+            "deep_sleep_ua": 0.65,
+            "active_ua_per_mhz": 45
+          },
+          "peripherals": {
+            "timers": ["2x复合定时器(CTIM/GTIM/BTIM)", "1x高级16位定时器(ATIM3)", "1x独立看门狗", "1x时钟校准模块(CTRIM)", "RTC", "SysTick"],
+            "communication": ["2xLPUART", "1xSPI", "1xI2C"],
+            "adc": "12位ADC",
+            "other": ["CRC", "10字节唯一ID", "LVD(16阶比较)"]
+          }
+        },
+        {
+          "part_number": "HC32L121",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 128,
+          "ram_kb": 16,
+          "packages": ["QFN32", "LQFP64", "LQFP48"],
+          "gpio": "56 IO/64 PIN, 40 IO/48 PIN, 26 IO/32 PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~105°C",
+          "power_consumption": {
+            "deep_sleep_ua": 0.65,
+            "deep_sleep_rtc_ua": 1.5,
+            "sleep_ua_per_mhz": 27,
+            "active_ua_per_mhz": 51
+          },
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "2x低功耗16位定时器", "1x可编程16位定时器(PCA)", "1x20位看门狗", "1x7位窗口看门狗", "RTC"],
+            "communication": ["2xUSART", "3xLPUART", "2xSPI", "2xI2C(1x高速)"],
+            "adc": "12-bit 2Msps SAR ADC",
+            "other": ["蜂鸣器发生器", "CRC16/32", "AES-128/192/256", "TRNG", "10字节唯一ID", "2x电压比较器(6位DAC)", "LCD驱动(4*40/6*38/8*36)", "2通道DMAC", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32L130",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 64,
+          "ram_kb": 8,
+          "packages": ["QFN32", "QFN48", "LQFP64", "LQFP48", "TSSOP28"],
+          "gpio": "56IO/64pin, 40IO/48pin, 26IO/32pin, 23IO/28pin",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "power_consumption": {
+            "deep_sleep_ua": 0.5,
+            "deep_sleep_rtc_ua": 0.9,
+            "low_speed_ua": 7,
+            "sleep_ua_per_mhz": 35,
+            "active_ua_per_mhz": 130
+          },
+          "variants": [
+            {"pn": "HC32L130J8TA-LQ48", "package": "LQFP48(7*7)", "flash": 64, "ram": 8, "gpio": 40},
+            {"pn": "HC32L130J8UA-QFN48", "package": "QFN48(7*7)", "flash": 64, "ram": 8, "gpio": 40},
+            {"pn": "HC32L130F8UA-QFN32TR", "package": "QFN32", "flash": 64, "ram": 8, "gpio": 26},
+            {"pn": "HC32L130E8PA-TSSOP28", "package": "TSSOP28", "flash": 64, "ram": 8, "gpio": 23}
+          ],
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "1x低功耗16位定时器", "1x20位看门狗", "RTC"],
+            "communication": ["2xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC, 17通道",
+            "other": ["蜂鸣器发生器", "CRC-16/32", "32位除法器", "AES128", "TRNG", "10字节唯一ID", "3x运放", "6位DAC", "2x电压比较器", "LCD驱动(4*40/6*38/8*36)", "2通道DMA", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32L136",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 64,
+          "ram_kb": 8,
+          "packages": ["QFN32", "QFN48", "LQFP64", "LQFP48", "TSSOP28"],
+          "gpio": "56IO/64pin, 40IO/48pin, 26IO/32pin, 23IO/28pin",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "power_consumption": {
+            "deep_sleep_ua": 0.5,
+            "deep_sleep_rtc_ua": 0.9,
+            "low_speed_ua": 7,
+            "sleep_ua_per_mhz": 35,
+            "active_ua_per_mhz": 130
+          },
+          "variants": [
+            {"pn": "HC32L136K8TA-LQFP64", "package": "LQFP64(10*10)", "flash": 64, "ram": 8, "gpio": 56},
+            {"pn": "HC32L136K8TA-LQ64", "package": "LQFP64(7*7)", "flash": 64, "ram": 8, "gpio": 56},
+            {"pn": "HC32L136J8TA-LQ48", "package": "LQFP48(7*7)", "flash": 64, "ram": 8, "gpio": 40}
+          ],
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "1x低功耗16位定时器", "1x20位看门狗", "RTC"],
+            "communication": ["2xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC, 17通道",
+            "other": ["蜂鸣器发生器", "CRC-16/32", "32位除法器", "AES128", "TRNG", "10字节唯一ID", "3x运放", "6位DAC", "2x电压比较器", "LCD驱动(4*40/6*38/8*36)", "2通道DMA", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32L150",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 128,
+          "ram_kb": 16,
+          "packages": ["QFN32", "LQFP64", "LQFP48", "LQFP32"],
+          "gpio": "56 IO/64 PIN, 40 IO/48 PIN, 26 IO/32 PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "note": "Compatible with HC32L136 peripherals + more features"
+        },
+        {
+          "part_number": "HC32L156",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 128,
+          "ram_kb": 16,
+          "packages": ["QFN32", "LQFP64", "LQFP48", "LQFP32"],
+          "gpio": "56 IO/64 PIN, 40 IO/48 PIN, 26 IO/32 PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C"
+        },
+        {
+          "part_number": "HC32L180",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 256,
+          "ram_kb": 32,
+          "packages": ["LQFP80", "LQFP64", "LQFP48", "LQFP32"],
+          "gpio": "72 IO/80 PIN, 56 IO/64 PIN, 40 IO/48 PIN, 26 IO/32 PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "power_consumption": {
+            "deep_sleep_ua": 0.8,
+            "deep_sleep_rtc_ua": 1.5,
+            "sleep_ua_per_mhz": 23,
+            "active_ua_per_mhz": 52
+          },
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "2x低功耗16位定时器", "1x可编程16位定时器(PCA)", "1x20位看门狗", "1x7位窗口看门狗", "RTC"],
+            "communication": ["4xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12-bit 1Msps SAR ADC",
+            "dac": "12-bit 500ksps DAC",
+            "other": ["蜂鸣器发生器", "CRC16/32", "AES-128/192/256", "TRNG", "10字节唯一ID", "LCD驱动(4*47/6*45/8*43)", "2通道DMAC", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32L190",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 256,
+          "ram_kb": 32,
+          "packages": ["LQFP100", "LQFP80", "LQFP64", "LQFP48", "QFN32"],
+          "gpio": "88IO/100PIN, 72IO/80PIN, 56IO/64PIN, 40IO/48PIN, 26IO/32PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "power_consumption": {
+            "deep_sleep_ua": 0.6,
+            "deep_sleep_rtc_ua": 1.0,
+            "low_speed_ua": 8,
+            "sleep_ua_per_mhz": 30,
+            "active_ua_per_mhz": 130
+          },
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "3x高性能16位定时器", "1x可编程16位定时器(PCA)", "1x20位看门狗", "RTC"],
+            "communication": ["4xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC",
+            "dac": "1x12位500Ksps DAC",
+            "other": ["蜂鸣器发生器", "CRC16/32", "AES-128/192/256", "TRNG", "10字节唯一ID", "1x运放", "3x电压比较器", "LCD驱动(4*52/6*50/8*48)", "2通道DMA", "LVD"]
+          }
+        },
+        {
+          "part_number": "HC32L196",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 256,
+          "ram_kb": 32,
+          "packages": ["LQFP100", "LQFP80", "LQFP64", "LQFP48", "QFN32"],
+          "gpio": "88IO/100PIN, 72IO/80PIN, 56IO/64PIN, 40IO/48PIN, 26IO/32PIN",
+          "voltage": "1.8~5.5V",
+          "temperature": "-40~85°C",
+          "power_consumption": {
+            "deep_sleep_ua": 0.6,
+            "deep_sleep_rtc_ua": 1.0,
+            "low_speed_ua": 8,
+            "sleep_ua_per_mhz": 30,
+            "active_ua_per_mhz": 130
+          },
+          "peripherals": {
+            "timers": ["3x1通道互补通用16位定时器", "1x3通道互补输出16位定时器", "3x高性能16位定时器", "1x可编程16位定时器(PCA)", "1x20位看门狗", "RTC"],
+            "communication": ["4xUART", "2xLPUART", "2xSPI", "2xI2C"],
+            "adc": "12位1Msps SAR ADC",
+            "dac": "1x12位500Ksps DAC",
+            "other": ["蜂鸣器发生器", "CRC16/32", "AES-128/192/256", "TRNG", "10字节唯一ID", "1x运放", "3x电压比较器", "LCD驱动(4*52/6*50/8*48)", "2通道DMA", "LVD"]
+          }
+        }
+      ]
+    },
+    "HC32M_MotorControl": {
+      "description": "Motor control MCUs (Mid-range, Cortex-M0+/M4)",
+      "models": [
+        {
+          "part_number": "HC32M120",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 64,
+          "ram_kb": 8,
+          "packages": ["QFN32", "LQFP48", "LQFP64"],
+          "peripherals": {
+            "motor_control": ["高级PWM定时器", "正交编码器输入"],
+            "adc": "12位ADC",
+            "communication": ["UART", "SPI", "I2C"]
+          }
+        },
+        {
+          "part_number": "HC32M140",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 72,
+          "flash_kb": 128,
+          "ram_kb": 16,
+          "packages": ["LQFP48", "LQFP64", "LQFP80"],
+          "peripherals": {
+            "motor_control": ["高级PWM定时器", "正交编码器输入", "霍尔传感器接口"],
+            "adc": "12位ADC",
+            "communication": ["UART", "SPI", "I2C", "CAN"]
+          }
+        },
+        {
+          "part_number": "HCM3043",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": 64,
+          "ram_kb": 8,
+          "packages": ["QFN48"],
+          "gpio": 23,
+          "voltage": "1.8~5.5V (MCU), 5.5~25V (Gate Driver)",
+          "temperature": "-40~85°C",
+          "description": "MCU + 45V三相栅极驱动器 + LDO集成",
+          "gate_driver": {
+            "voltage": "45V",
+            "output_current": "1A/1A (source/sink)",
+            "dead_time": "0.5μs",
+            "features": ["内置死区时间", "直通保护", "欠压锁定"]
+          },
+          "ldo": {
+            "output_voltage": "5.0V",
+            "output_current": "10mA",
+            "dropout_voltage": "200mV@50mA",
+            "quiescent_current": "2.5μA"
+          },
+          "peripherals": {
+            "timers": ["通用定时器", "高级定时器"],
+            "communication": ["UART", "SPI", "I2C"],
+            "adc": "16路12位1Msps SAR ADC",
+            "other": ["2通道DMA", "10字节唯一ID", "运放", "6位DAC", "2x电压比较器", "LVD"]
+          }
+        }
+      ]
+    },
+    "HC32A_Automotive": {
+      "description": "Automotive grade MCUs (AEC-Q100 certified)",
+      "models": [
+        {
+          "part_number": "HC32A0x8x",
+          "series": "HC32A0x8x",
+          "core": "Cortex-M0+",
+          "max_frequency_mhz": 48,
+          "flash_kb": "32~128",
+          "ram_kb": "4~16",
+          "packages": ["LQFP48", "LQFP64"],
+          "certification": "AEC-Q100",
+          "temperature": "-40~125°C",
+          "note": "Entry-level automotive MCU for body control applications"
+        }
+      ]
+    }
+  },
+  "excluded_high_performance": {
+    "description": "High-performance series excluded from this collection",
+    "models": [
+      {
+        "part_number": "HC32F334",
+        "reason": "Digital power - specialized high-performance (120MHz M4)",
+        "core": "Cortex-M4",
+        "features": ["高精度PWM", "PLA", "CAN-FD"]
+      },
+      {
+        "part_number": "HC32F448",
+        "reason": "High-performance M4",
+        "core": "Cortex-M4",
+        "flash_kb": 128
+      },
+      {
+        "part_number": "HC32F451/F452",
+        "reason": "High-performance M4 (200MHz)",
+        "core": "Cortex-M4",
+        "flash_kb": 256
+      },
+      {
+        "part_number": "HC32F460",
+        "reason": "High-performance M4 (200MHz)",
+        "core": "Cortex-M4",
+        "flash_kb": 512,
+        "ram_kb": 192
+      },
+      {
+        "part_number": "HC32F467",
+        "reason": "High-performance M4 (512KB)",
+        "core": "Cortex-M4",
+        "flash_kb": 512
+      },
+      {
+        "part_number": "HC32F472",
+        "reason": "High-performance M4 (256KB)",
+        "core": "Cortex-M4",
+        "flash_kb": 256
+      },
+      {
+        "part_number": "HC32F4A0",
+        "reason": "Flagship 240MHz M4",
+        "core": "Cortex-M4",
+        "flash_kb": 2048,
+        "ram_kb": 516
+      },
+      {
+        "part_number": "HC32F4A2",
+        "reason": "Flagship high-performance",
+        "core": "Cortex-M4",
+        "flash_kb": 2048
+      },
+      {
+        "part_number": "HC32F4A8",
+        "reason": "Flagship 240MHz M4 (2MB Flash)",
+        "core": "Cortex-M4",
+        "flash_kb": 2048,
+        "ram_kb": 516
+      },
+      {
+        "part_number": "HC32A4A8x",
+        "reason": "High-end automotive (flagship)",
+        "core": "Cortex-M4"
+      }
+    ]
+  },
+  "summary": {
+    "total_series": 4,
+    "total_models_collected": 27,
+    "by_series": {
+      "HC32F0_Entry": 4,
+      "HC32F1_Mainstream": 6,
+      "HC32L_LowPower": 10,
+      "HC32M_MotorControl": 3,
+      "HC32A_Automotive": 1
+    },
+    "core_distribution": {
+      "Cortex-M0+": 27
+    },
+    "flash_range_kb": "16~256",
+    "ram_range_kb": "2~32",
+    "frequency_range_mhz": "32~72"
+  }
+}
