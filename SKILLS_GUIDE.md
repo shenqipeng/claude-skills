@@ -1,8 +1,18 @@
 # Claude Code Skills Guide / Claude Code 技能集指南
 
-A curated collection of 24 skills for Claude Code, adapted from [obra/superpowers](https://github.com/obra/superpowers) with the plugin framework removed. These skills form a structured workflow for software development — from requirements gathering to implementation, debugging, and delivery.
+A curated collection of 24 skills for Claude Code, assembled from multiple open-source projects and original work. These skills form a structured workflow for software development — from requirements gathering to implementation, debugging, and delivery.
 
-本技能集包含 24 个 Claude Code 技能，改编自 [obra/superpowers](https://github.com/obra/superpowers)，移除了插件框架。这些技能构成了从需求分析到实现、调试和交付的完整开发工作流。
+本技能集包含 24 个 Claude Code 技能，从多个开源项目和个人原创整合而来，构成了从需求分析到实现、调试和交付的完整开发工作流。
+
+## Sources / 来源
+
+| Source | Count / 数量 | Skills |
+|--------|------|--------|
+| [obra/superpowers](https://github.com/obra/superpowers) | 17 | brainstorming, careful, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, freeze, karpathy-guidelines, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills |
+| [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) | 4 | product-requirements, test-cases, skill-install, sparv |
+| [anthropics/skills](https://github.com/anthropics/skills) | 1 | skill-creator |
+| [vercel-labs/skills](https://github.com/vercel-labs/skills) | 1 | find-skills |
+| **Original / 原创** | 1 | mcu-selection |
 
 ---
 
@@ -10,77 +20,77 @@ A curated collection of 24 skills for Claude Code, adapted from [obra/superpower
 
 ### 1. Entry Point / 入口
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **using-superpowers** | Session entry point and skill router. Routes to appropriate skills based on task type. | 会话入口和技能路由器。根据任务类型路由到对应技能。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **using-superpowers** | Session entry point and skill router. Routes to appropriate skills based on task type. | 会话入口和技能路由器。根据任务类型路由到对应技能。 | [obra/superpowers](https://github.com/obra/superpowers) |
 
 ### 2. Requirements & Design / 需求与设计
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **product-requirements** | Interactive Product Owner with 100-point quality scoring. Generates PRD at score ≥90. | 交互式产品负责人，100 分制质量评分，≥90 分生成 PRD。 |
-| **brainstorming** | Collaborative design exploration. One question at a time, proposes 2-3 approaches. HARD GATE: no code before design approval. | 协作式设计探索。逐个提问，提出 2-3 种方案。硬性门槛：设计批准前不写代码。 |
-| **mcu-selection** | MCU selection from 284+ database (SiLabs, GigaDevice, Fudan Micro, WCH, XHSC). | 从 284+ 数据库中选择 MCU（芯科、兆易创新、复旦微、沁恒、小华）。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **product-requirements** | Interactive Product Owner with 100-point quality scoring. Generates PRD at score ≥90. | 交互式产品负责人，100 分制质量评分，≥90 分生成 PRD。 | [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude/tree/master/skills/product-requirements) |
+| **brainstorming** | Collaborative design exploration. One question at a time, proposes 2-3 approaches. HARD GATE: no code before design approval. | 协作式设计探索。逐个提问，提出 2-3 种方案。硬性门槛：设计批准前不写代码。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **mcu-selection** | MCU selection from 284+ database (SiLabs, GigaDevice, Fudan Micro, WCH, XHSC). | 从 284+ 数据库中选择 MCU（芯科、兆易创新、复旦微、沁恒、小华）。 | **Original / 原创** |
 
 ### 3. Planning / 规划
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **writing-plans** | Converts specifications into step-by-step implementation plans with 2-5 min tasks. | 将规格说明转换为逐步实施计划，每项任务 2-5 分钟。 |
-| **test-cases** | Generates structured test cases from PRD/requirements. Bridges requirements → testing. | 从 PRD/需求生成结构化测试用例。连接需求与测试。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **writing-plans** | Converts specifications into step-by-step implementation plans with 2-5 min tasks. | 将规格说明转换为逐步实施计划，每项任务 2-5 分钟。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **test-cases** | Generates structured test cases from PRD/requirements. Bridges requirements → testing. | 从 PRD/需求生成结构化测试用例。连接需求与测试。 | [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude/tree/master/skills/test-cases) |
 
 ### 4. Execution / 执行
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **subagent-driven-development** | Executes plans with fresh subagent per task + two-stage review (spec compliance + code quality). | 每个任务委派新子代理执行，双重审查（规格合规 + 代码质量）。 |
-| **executing-plans** | Alternative inline execution with batch checkpoints. Lighter weight than SDD. | 替代的内联执行方式，带批量检查点。比子代理驱动更轻量。 |
-| **dispatching-parallel-agents** | Runs 2+ independent tasks in parallel with separate subagents. | 使用独立子代理并行运行 2+ 个独立任务。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **subagent-driven-development** | Executes plans with fresh subagent per task + two-stage review (spec compliance + code quality). | 每个任务委派新子代理执行，双重审查（规格合规 + 代码质量）。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **executing-plans** | Alternative inline execution with batch checkpoints. Lighter weight than SDD. | 替代的内联执行方式，带批量检查点。比子代理驱动更轻量。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **dispatching-parallel-agents** | Runs 2+ independent tasks in parallel with separate subagents. | 使用独立子代理并行运行 2+ 个独立任务。 | [obra/superpowers](https://github.com/obra/superpowers) |
 
 ### 5. Testing / 测试
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **test-driven-development** | RED → GREEN → REFACTOR. Iron Law: no code without failing test first. | 红→绿→重构。铁律：没有失败测试就不写代码。 |
-| **verification-before-completion** | MANDATORY before claiming done. Runs verification commands and confirms output. | 完成前强制验证。运行验证命令并确认输出。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **test-driven-development** | RED → GREEN → REFACTOR. Iron Law: no code without failing test first. | 红→绿→重构。铁律：没有失败测试就不写代码。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **verification-before-completion** | MANDATORY before claiming done. Runs verification commands and confirms output. | 完成前强制验证。运行验证命令并确认输出。 | [obra/superpowers](https://github.com/obra/superpowers) |
 
 ### 6. Quality Assurance / 质量保证
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **karpathy-guidelines** | Coding quality: think before code, simplicity, surgical changes, verifiable criteria. | 编码质量：先思考后编码，简洁，精准修改，可验证的标准。 |
-| **requesting-code-review** | Gets code review before merging. Works with subagent-driven per-task review. | 合并前获取代码审查。配合子代理驱动的逐任务审查。 |
-| **receiving-code-review** | Processes code review feedback with technical rigor before implementing. | 在实施前以技术严谨性处理代码审查反馈。 |
-| **careful** | Safety guardrails for destructive commands. Signals: flash, erase, fuse, force-push. | 破坏性命令的安全护栏。信号词：烧录、擦除、熔丝、强制推送。 |
-| **freeze** | Restricts file edits to a specific directory. Especially valuable in embedded debugging. | 将文件编辑限制在特定目录。在嵌入式调试中特别有价值。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **karpathy-guidelines** | Coding quality: think before code, simplicity, surgical changes, verifiable criteria. | 编码质量：先思考后编码，简洁，精准修改，可验证的标准。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **requesting-code-review** | Gets code review before merging. Works with subagent-driven per-task review. | 合并前获取代码审查。配合子代理驱动的逐任务审查。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **receiving-code-review** | Processes code review feedback with technical rigor before implementing. | 在实施前以技术严谨性处理代码审查反馈。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **careful** | Safety guardrails for destructive commands. Signals: flash, erase, fuse, force-push. | 破坏性命令的安全护栏。信号词：烧录、擦除、熔丝、强制推送。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **freeze** | Restricts file edits to a specific directory. Especially valuable in embedded debugging. | 将文件编辑限制在特定目录。在嵌入式调试中特别有价值。 | [obra/superpowers](https://github.com/obra/superpowers) |
 
 ### 7. Debugging / 调试
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **systematic-debugging** | Structured bug investigation: freeze scope → careful → TDD → verify. NEVER skip on bugs. | 结构化缺陷调查：锁定范围→谨慎→TDD→验证。遇到缺陷绝不跳过。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **systematic-debugging** | Structured bug investigation: freeze scope → careful → TDD → verify. NEVER skip on bugs. | 结构化缺陷调查：锁定范围→谨慎→TDD→验证。遇到缺陷绝不跳过。 | [obra/superpowers](https://github.com/obra/superpowers) |
 
 ### 8. Delivery / 交付
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **using-git-worktrees** | Creates isolated git worktrees for feature work. Required before SDD or executing-plans. | 为功能开发创建隔离的 git 工作树。SDD 和执行计划的前置要求。 |
-| **finishing-a-development-branch** | Implementation done → verify tests → present merge/PR options → clean up. | 实现完成→验证测试→提供合并/PR 选项→清理。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **using-git-worktrees** | Creates isolated git worktrees for feature work. Required before SDD or executing-plans. | 为功能开发创建隔离的 git 工作树。SDD 和执行计划的前置要求。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **finishing-a-development-branch** | Implementation done → verify tests → present merge/PR options → clean up. | 实现完成→验证测试→提供合并/PR 选项→清理。 | [obra/superpowers](https://github.com/obra/superpowers) |
 
 ### 9. Skill Development / 技能开发
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **writing-skills** | TDD for process docs: write failing test → write skill → refactor. | 过程文档的 TDD：写失败测试→写技能→重构。 |
-| **skill-creator** | Create, evaluate, benchmark, and optimize skills. Complements writing-skills. | 创建、评估、基准测试和优化技能。与 writing-skills 互补。 |
-| **skill-install** | Install skills from GitHub with automated security scanning. | 从 GitHub 安装技能，带自动安全扫描。 |
-| **find-skills** | Discover and install new skills from the open skills ecosystem. | 从开放技能生态中发现和安装新技能。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **writing-skills** | TDD for process docs: write failing test → write skill → refactor. | 过程文档的 TDD：写失败测试→写技能→重构。 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **skill-creator** | Create, evaluate, benchmark, and optimize skills. Complements writing-skills. | 创建、评估、基准测试和优化技能。与 writing-skills 互补。 | [anthropics/skills](https://github.com/anthropics/skills) |
+| **skill-install** | Install skills from GitHub with automated security scanning. | 从 GitHub 安装技能，带自动安全扫描。 | [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude/tree/master/skills/skill-install) |
+| **find-skills** | Discover and install new skills from the open skills ecosystem. | 从开放技能生态中发现和安装新技能。 | [vercel-labs/skills](https://github.com/vercel-labs/skills) |
 
 ### 10. Workflow / 工作流
 
-| Skill | Description | 说明 |
-|-------|-------------|------|
-| **sparv** | SPARV: Specify → Plan → Act → Review → Vault. Structured task execution with journaling. | SPARV：指定→计划→行动→审查→归档。带日志的结构化任务执行。 |
+| Skill | Description | 说明 | Source |
+|-------|-------------|------|--------|
+| **sparv** | SPARV: Specify → Plan → Act → Review → Vault. Structured task execution with journaling. | SPARV：指定→计划→行动→审查→归档。带日志的结构化任务执行。 | [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude/tree/master/skills/sparv) |
 
 ---
 
@@ -95,7 +105,7 @@ flowchart TD
     subgraph Requirements["Requirements & Design / 需求与设计"]
         PR[product-requirements<br/>产品需求 PRD]
         BS[brainstorming<br/>设计探索]
-        MCU[mcu-selection<br/>MCU选型]
+        MCU[mcu-selection<br/>MCU选型 🏷️原创]
     end
 
     subgraph Planning["Planning / 规划"]
@@ -197,6 +207,7 @@ flowchart TD
     %% Styling
     classDef entry fill:#4A90D9,stroke:#2C5F8A,color:#fff
     classDef req fill:#7B68EE,stroke:#4B3BAE,color:#fff
+    classDef original fill:#E74C3C,stroke:#A83325,color:#fff
     classDef plan fill:#2ECC71,stroke:#1A8B4C,color:#fff
     classDef exec fill:#E67E22,stroke:#A85C18,color:#fff
     classDef test fill:#E74C3C,stroke:#A83325,color:#fff
@@ -207,7 +218,8 @@ flowchart TD
     classDef workflow fill:#34495E,stroke:#1C2833,color:#fff
 
     class US entry
-    class PR,BS,MCU req
+    class PR,BS req
+    class MCU original
     class WP,TC plan
     class UGW,SDD,EP,DPA exec
     class TDD,VBC test
@@ -217,6 +229,9 @@ flowchart TD
     class WS,SC,SI,FS meta
     class SP workflow
 ```
+
+> **Color note / 颜色说明:** Red node = original work (mcu-selection). Other colors represent categories, see legend above.
+> 红色节点 = 原创（mcu-selection）。其余颜色代表类别，见上方图例。
 
 ---
 
@@ -266,11 +281,20 @@ These skills are invoked by other skills at specific points, not triggered direc
 
 以下技能在特定场景下被其他技能调用，不直接触发：
 
-| Skill | Invoked By | When / 何时调用 |
-|-------|-----------|----------------|
-| **freeze** | systematic-debugging, subagent-driven-development, executing-plans | Before editing — lock scope to fault module or task directory / 编辑前锁定范围到故障模块或任务目录 |
-| **careful** | systematic-debugging, subagent-driven-development, finishing-a-development-branch | Before destructive ops: flash, erase, fuse, force-push / 破坏性操作前：烧录、擦除、熔丝、强制推送 |
-| **karpathy-guidelines** | subagent-driven-development, executing-plans, systematic-debugging | During implementation — ensures quality principles / 实现过程中确保质量准则 |
-| **verification-before-completion** | TDD, systematic-debugging, subagent-driven-development, finishing-a-development-branch | Before claiming done/fixed/passing / 完成前必须验证 |
-| **requesting-code-review** | subagent-driven-development (per task), finishing-a-development-branch | After implementation, before merge / 实现后合并前 |
-| **test-driven-development** | systematic-debugging (Phase 4), subagent-driven-development | Writing fix or feature code / 编写修复或功能代码 |
+| Skill | Invoked By | When / 何时调用 | Source |
+|-------|-----------|----------------|--------|
+| **freeze** | systematic-debugging, subagent-driven-development, executing-plans | Before editing — lock scope to fault module or task directory / 编辑前锁定范围到故障模块或任务目录 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **careful** | systematic-debugging, subagent-driven-development, finishing-a-development-branch | Before destructive ops: flash, erase, fuse, force-push / 破坏性操作前：烧录、擦除、熔丝、强制推送 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **karpathy-guidelines** | subagent-driven-development, executing-plans, systematic-debugging | During implementation — ensures quality principles / 实现过程中确保质量准则 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **verification-before-completion** | TDD, systematic-debugging, subagent-driven-development, finishing-a-development-branch | Before claiming done/fixed/passing / 完成前必须验证 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **requesting-code-review** | subagent-driven-development (per task), finishing-a-development-branch | After implementation, before merge / 实现后合并前 | [obra/superpowers](https://github.com/obra/superpowers) |
+| **test-driven-development** | systematic-debugging (Phase 4), subagent-driven-development | Writing fix or feature code / 编写修复或功能代码 | [obra/superpowers](https://github.com/obra/superpowers) |
+
+---
+
+## Acknowledgments / 致谢
+
+- [obra/superpowers](https://github.com/obra/superpowers) — Core workflow skills (17 skills)
+- [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude) — product-requirements, test-cases, skill-install, sparv
+- [anthropics/skills](https://github.com/anthropics/skills) — skill-creator
+- [vercel-labs/skills](https://github.com/vercel-labs/skills) — find-skills
