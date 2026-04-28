@@ -12,9 +12,10 @@ Ironclad workflow skills for MCU engineering — built on [obra/superpowers](htt
 ### What's Included
 
 - **25 skills** in `skills/` — brainstorming, MCU selection, systematic debugging, TDD, fact-forcing gates, etc.
-- **Hooks** in `hooks/` — SessionStart hook for auto-loading `using-superpowers`
+- **Hooks** in `hooks/` — SessionStart hook for Claude Code
+- **Plugin** in `.opencode/plugins/` — OpenCode plugin with auto-discovery and health checks
 
-### Quick Install
+### Quick Install — Claude Code
 
 ```bash
 git clone https://github.com/shenqipeng/mcu-ironclad.git
@@ -24,20 +25,47 @@ bash install.sh
 
 Then edit `~/.claude/settings.json` to fill in your API keys.
 
-### Update
+### Quick Install — OpenCode
 
+**Linux/macOS:**
 ```bash
+git clone https://github.com/shenqipeng/mcu-ironclad.git
 cd mcu-ironclad
-git pull
-bash install.sh
+bash install-opencode.sh
 ```
 
-### Settings
+**Windows PowerShell:**
+```powershell
+git clone https://github.com/shenqipeng/mcu-ironclad.git
+cd mcu-ironclad
+.\install-opencode.ps1
+```
+
+The installer adds the repo as a local plugin in `opencode.json`. The plugin auto-discovers all 25 skills, injects the superpowers bootstrap, and runs health checks on startup.
+
+### Update
+
+**Claude Code:**
+```bash
+cd mcu-ironclad && git pull && bash install.sh
+```
+
+**OpenCode:**
+```bash
+cd mcu-ironclad && git pull
+```
+(OpenCode reads skills directly from the repo — no re-install needed after pull.)
+
+### Settings (Claude Code)
 
 - `settings.json.example` — Global settings template (fill in your API keys and model names)
 - `settings.local.json.example` — Permissions template
 
 These are starting points. The installer will not overwrite your existing settings files.
+
+### Settings (OpenCode)
+
+OpenCode reads configuration from `~/.config/opencode/opencode.json`. The installer adds the repo path to the `plugin` array. No additional settings files are needed — skill discovery, bootstrap injection, and health checks are handled by the plugin automatically.
 
 ### Skills List
 
@@ -205,9 +233,10 @@ Phase 9 — Cleanup
 ### 包含内容
 
 - **25 个 skills** 位于 `skills/` — 设计探索、MCU选型、系统化调试、TDD、事实强制门 等
-- **Hooks** 位于 `hooks/` — SessionStart 钩子，自动加载 `using-superpowers`
+- **Hooks** 位于 `hooks/` — Claude Code 的 SessionStart 钩子
+- **Plugin** 位于 `.opencode/plugins/` — OpenCode 插件，自动发现技能和健康检查
 
-### 快速安装
+### 快速安装 — Claude Code
 
 ```bash
 git clone https://github.com/shenqipeng/mcu-ironclad.git
@@ -217,20 +246,47 @@ bash install.sh
 
 然后编辑 `~/.claude/settings.json` 填入你的 API 密钥。
 
-### 更新
+### 快速安装 — OpenCode
 
+**Linux/macOS:**
 ```bash
+git clone https://github.com/shenqipeng/mcu-ironclad.git
 cd mcu-ironclad
-git pull
-bash install.sh
+bash install-opencode.sh
 ```
 
-### 配置说明
+**Windows PowerShell:**
+```powershell
+git clone https://github.com/shenqipeng/mcu-ironclad.git
+cd mcu-ironclad
+.\install-opencode.ps1
+```
+
+安装脚本将仓库路径添加为 `opencode.json` 中的本地插件。插件自动发现全部 25 个技能、注入 superpowers 引导上下文、并启动时运行健康检查。
+
+### 更新
+
+**Claude Code:**
+```bash
+cd mcu-ironclad && git pull && bash install.sh
+```
+
+**OpenCode:**
+```bash
+cd mcu-ironclad && git pull
+```
+（OpenCode 直接从仓库读取技能，pull 后无需重新安装。）
+
+### 配置说明 (Claude Code)
 
 - `settings.json.example` — 全局配置模板（需填入 API 密钥和模型名称）
 - `settings.local.json.example` — 权限配置模板
 
 以上为初始模板，安装脚本不会覆盖已有配置文件。
+
+### 配置说明 (OpenCode)
+
+OpenCode 从 `~/.config/opencode/opencode.json` 读取配置。安装脚本将仓库路径添加到 `plugin` 数组。无需额外配置文件——技能发现、引导注入和健康检查均由插件自动处理。
 
 ### 技能列表
 
