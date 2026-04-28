@@ -1,5 +1,5 @@
-/**
- * Superpowers plugin for OpenCode.ai
+﻿/**
+ * MCU Ironclad plugin for OpenCode.ai
  *
  * Works with the mcu-ironclad skill collection repo.
  * - Injects bootstrap context via system prompt transform.
@@ -7,8 +7,8 @@
  * - Validates skill graph integrity at startup.
  *
  * Compatible with both:
- *   1. The obra/superpowers repo (14 skills in skills/)
- *   2. The mcu-ironclad repo (25 skills: 14 superpowers + 11 independent in skills/)
+ *   1. The obra/superpowers upstream (14 core skills)
+ *   2. The mcu-ironclad repo (25 skills: 14 core + 11 independent in skills/)
  */
 
 import path from 'path';
@@ -52,8 +52,8 @@ const normalizePath = (p, homeDir) => {
   return path.resolve(normalized);
 };
 
-// Superpowers core skills (from obra/superpowers)
-const SUPERPOWERS_SKILLS = [
+// Core workflow skills (originally from obra/superpowers)
+const CORE_SKILLS = [
   'brainstorming',
   'dispatching-parallel-agents',
   'executing-plans',
@@ -85,7 +85,7 @@ const INDEPENDENT_SKILLS = [
   'test-cases',
 ];
 
-const ALL_KNOWN_SKILLS = [...SUPERPOWERS_SKILLS, ...INDEPENDENT_SKILLS];
+const ALL_KNOWN_SKILLS = [...CORE_SKILLS, ...INDEPENDENT_SKILLS];
 
 // Validate that all expected skills exist on disk.
 // Returns { missing: string[], extra: string[] }
@@ -93,8 +93,8 @@ const validateSkillGraph = (skillsDir) => {
   const missing = [];
   const extra = [];
 
-  // Check superpowers skills (these are critical for workflow)
-  for (const name of SUPERPOWERS_SKILLS) {
+  // Check core workflow skills (these are critical for workflow)
+  for (const name of CORE_SKILLS) {
     const skillFile = path.join(skillsDir, name, 'SKILL.md');
     if (!fs.existsSync(skillFile)) {
       missing.push(name);
@@ -119,31 +119,31 @@ const validateSkillGraph = (skillsDir) => {
   return { missing, extra };
 };
 
-export const SuperpowersPlugin = async ({ client, directory }) => {
+export const McuIroncladPlugin = async ({ client, directory }) => {
   const homeDir = os.homedir();
-  const superpowersSkillsDir = path.resolve(__dirname, '../../skills');
+  const skillsDir = path.resolve(__dirname, '../../skills');
   const envConfigDir = normalizePath(process.env.OPENCODE_CONFIG_DIR, homeDir);
   const configDir = envConfigDir || path.join(homeDir, '.config/opencode');
 
   // Run skill graph health check at startup
-  const healthCheck = validateSkillGraph(superpowersSkillsDir);
+  const healthCheck = validateSkillGraph(skillsDir);
   const hasWarnings = healthCheck.missing.length > 0 || healthCheck.extra.length > 0;
   if (hasWarnings) {
     if (healthCheck.missing.length > 0) {
-      console.warn(`[superpowers] ⚠️ Missing core skills: ${healthCheck.missing.join(', ')}`);
+      console.warn(`[mcu-ironclad] ⚠️ Missing core skills: ${healthCheck.missing.join(', ')}`);
     }
     if (healthCheck.extra.length > 0) {
-      console.warn(`[superpowers] ℹ️ Unregistered skills (not in known list): ${healthCheck.extra.join(', ')}`);
+      console.warn(`[mcu-ironclad] ℹ️ Unregistered skills (not in known list): ${healthCheck.extra.join(', ')}`);
     }
-    console.warn('[superpowers] Run `git pull` in the mcu-ironclad directory or update the skill list in the plugin to fix.');
+    console.warn('[mcu-ironclad] Run `git pull` in the mcu-ironclad directory or update the skill list in the plugin to fix.');
   } else {
-    console.log(`[superpowers] ✅ Skill graph validated: ${SUPERPOWERS_SKILLS.length} core + ${INDEPENDENT_SKILLS.length} independent skills present`);
+    console.log(`[mcu-ironclad] ✅ Skill graph validated: ${CORE_SKILLS.length} core + ${INDEPENDENT_SKILLS.length} independent skills present`);
   }
 
   // Helper to generate bootstrap content
   const getBootstrapContent = () => {
     // Try to load using-superpowers skill
-    const skillPath = path.join(superpowersSkillsDir, 'using-superpowers', 'SKILL.md');
+    const skillPath = path.join(skillsDir, 'using-superpowers', 'SKILL.md');
     if (!fs.existsSync(skillPath)) return null;
 
     const fullContent = fs.readFileSync(skillPath, 'utf8');
@@ -159,7 +159,7 @@ When skills reference tools you don't have, substitute OpenCode equivalents:
 Use OpenCode's native \`skill\` tool to list and load skills.`;
 
     return `<EXTREMELY_IMPORTANT>
-You have superpowers.
+You have mcu-ironclad skills.
 
 **IMPORTANT: The using-superpowers skill content is included below. It is ALREADY LOADED - you are currently following it. Do NOT use the skill tool to load "using-superpowers" again - that would be redundant.**
 
@@ -171,12 +171,12 @@ ${toolMapping}
 
   return {
     // Inject skills path into live config so OpenCode discovers ALL skills
-    // (both superpowers core and independent) from the single skills/ directory.
+    // (both core and independent) from the single skills/ directory.
     config: async (config) => {
       config.skills = config.skills || {};
       config.skills.paths = config.skills.paths || [];
-      if (!config.skills.paths.includes(superpowersSkillsDir)) {
-        config.skills.paths.push(superpowersSkillsDir);
+      if (!config.skills.paths.includes(skillsDir)) {
+        config.skills.paths.push(skillsDir);
       }
     },
 
@@ -192,7 +192,7 @@ ${toolMapping}
       // Build health warning if skills are missing
       let healthWarning = '';
       if (hasWarnings && healthCheck.missing.length > 0) {
-        healthWarning = `\n\n<SUPERPOWERS_HEALTH_WARNING>\n⚠️ Skill graph inconsistency detected: ${healthCheck.missing.length} core skill(s) missing — ${healthCheck.missing.map(s => `\`${s}\``).join(', ')}. Workflow links referencing these skills may be broken. Inform the user and suggest running \`git pull\` in the mcu-ironclad directory or checking skill installation.\n</SUPERPOWERS_HEALTH_WARNING>`;
+        healthWarning = `\n\n<MCU_IRONCLAD_HEALTH_WARNING>\n⚠️ Skill graph inconsistency detected: ${healthCheck.missing.length} core skill(s) missing — ${healthCheck.missing.map(s => `\`${s}\``).join(', ')}. Workflow links referencing these skills may be broken. Inform the user and suggest running \`git pull\` in the mcu-ironclad directory or checking skill installation.\n</MCU_IRONCLAD_HEALTH_WARNING>`;
       }
 
       const ref = firstUser.parts[0];
